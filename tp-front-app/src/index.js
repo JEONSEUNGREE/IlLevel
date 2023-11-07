@@ -3,13 +3,16 @@ import reportWebVitals from './reportWebVitals';
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import router from './router/Router';
+import { RecoilRoot } from 'recoil';
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider 
-      router={router}
-      fallbackElement={<div>Loading...</div>}
-    />
+    <RecoilRoot>
+      <RouterProvider 
+        router={router}
+        fallbackElement={<div>Loading...</div>}
+      />
+    </RecoilRoot>
   </React.StrictMode>
 )
 
