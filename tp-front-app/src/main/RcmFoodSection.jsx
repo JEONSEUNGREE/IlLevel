@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function RcmFoodSection() {
-  return (
-    <div className='main-rcm-food-area'>RcmFoodSection</div>
-  )
+    return <div className="main-rcm-food-area">RcmFoodSection</div>;
 }
