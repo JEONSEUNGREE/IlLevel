@@ -1,13 +1,13 @@
 // children 넘길시 Outlet 필요
-import { Outlet } from 'react-router-dom';
-import MainPage from '../main/MainPage';
+import { Outlet } from "react-router-dom";
+import MainPage from "../main/MainPage";
 
 const mainPage = {
     path: "/main",
     element: (
-      <>
-        <MainPage/>
-      </>
+        <>
+            <MainPage />
+        </>
     ),
     // children: [
     //   {
@@ -22,13 +22,14 @@ const mainPage = {
     //     element: <div>2depth</div>
     //   }
     // ]
-  }
+};
 
 const aboutPage = {
     path: "about",
     element: (
-        <div>About
-            <Outlet/>
+        <div>
+            About
+            <Outlet />
         </div>
     ),
     // children: [
@@ -37,9 +38,6 @@ const aboutPage = {
     //         element: <div>2depth</div>
     //     }
     // ]
-  }
-
-export { 
-    mainPage,
-    aboutPage
 };
+
+export { mainPage, aboutPage };

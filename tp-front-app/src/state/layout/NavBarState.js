@@ -1,33 +1,32 @@
 import { atom } from "recoil";
 
-
 const navListState = atom({
-  key: "navListState",
-  default: [
-    {
-        navName: "Discover",
-        path: "/discover"
-    },
-    {
-        navName: "Trips",
-        path: "/trips"
-    },
-    {
-        navName: "Community",
-        path: "/community"
-    },
-    {
-        navName: "More",
-        path: "/more"
-    }
-  ]
+    key: "navListState",
+    default: [
+        {
+            navName: "Discover",
+            path: "/discover",
+        },
+        {
+            navName: "Trips",
+            path: "/trips",
+        },
+        {
+            navName: "Community",
+            path: "/community",
+        },
+        {
+            navName: "More",
+            path: "/more",
+        },
+    ],
 });
 
 // const filteredTodoListState = selector({
 //   key: "navListState",
 //   get: ({ get }) => {
 //     const filter = get(todoListFilterState);
-    
+
 //     return <div>test1 Loading</div>
 //   }
 // });
@@ -55,6 +54,4 @@ const navListState = atom({
 //   }
 // });
 
-export {
-    navListState,
-};
+export { navListState };
