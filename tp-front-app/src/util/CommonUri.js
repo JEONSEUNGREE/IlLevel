@@ -1,2 +1,2 @@
-export const main = "/main";
+export const main = "/";
 export const about = "/about";
