@@ -6,7 +6,7 @@ const NavForm = ({ item }) => {
 };
 
 NavForm.propTypes = {
-    item: PropTypes.node,
+    item: PropTypes.object,
     navName: PropTypes.node,
 };
 

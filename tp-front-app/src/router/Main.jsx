@@ -1,9 +1,10 @@
 // children 넘길시 Outlet 필요
 import { Outlet } from "react-router-dom";
 import MainPage from "../main/MainPage";
+import { main, about } from "../util/CommonUri";
 
 const mainPage = {
-    path: "/main",
+    path: main,
     element: (
         <>
             <MainPage />
@@ -25,7 +26,7 @@ const mainPage = {
 };
 
 const aboutPage = {
-    path: "about",
+    path: about,
     element: (
         <div>
             About

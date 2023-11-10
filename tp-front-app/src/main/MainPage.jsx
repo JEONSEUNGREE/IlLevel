@@ -37,7 +37,6 @@ export default function MainPage() {
             <RcmFoodSection />
             <MostLocalSection />
             <GuideSection />
-            MainPage
             <Outlet />
         </div>
     );
