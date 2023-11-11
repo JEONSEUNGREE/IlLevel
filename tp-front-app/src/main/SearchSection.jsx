@@ -1,34 +1,28 @@
 import React from "react";
-import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
 import { useRecoilValue } from "recoil";
-import { mainSearchList } from "../state/main/MainState";
+import { searchListState } from "../state/main/SearchListState";
+import SearchForm from "./search/SearchForm";
+import styles from "../css/main/Main.module.css";
 
 export default function SearchSection() {
-    const mainSearch = useRecoilValue(mainSearchList);
-
-    const options = mainSearch.map((option) => {
-        const firstLetter = option.title[0].toUpperCase();
-        return {
-            firstLetter: firstLetter,
-            ...option,
-        };
-    });
+    const searchList = useRecoilValue(searchListState);
 
     return (
-        <div className="main-search-area">
-            <Autocomplete
-                id="grouped-demo"
-                options={options.sort(
-                    (a, b) => -b.firstLetter.localeCompare(a.firstLetter),
-                )}
-                groupBy={(option) => option.firstLetter}
-                getOptionLabel={(option) => option.title}
-                sx={{ width: 600 }}
-                renderInput={(params) => (
-                    <TextField {...params} label="With categories" />
-                )}
-            />
+        <div className={styles.search_wrap}>
+            <h1 className={styles.search_message}>어디로 가시나요?</h1>
+            <ul className={styles.search_menu_wrap}>
+                {searchList.map((item) => (
+                    <SearchForm item={item} key={item.searchName} />
+                ))}
+            </ul>
+            <div className={styles.search_bar_wrap}>
+                <input
+                    type="text"
+                    className={styles.search_bar_input}
+                    placeholder="여행지, 즐길거리, 호텔 등"
+                />
+                <button className={styles.search_bar_button}>검색</button>
+            </div>
         </div>
     );
 }
