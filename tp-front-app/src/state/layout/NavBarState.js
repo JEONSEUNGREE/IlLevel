@@ -4,19 +4,19 @@ const navListState = atom({
     key: "navListState",
     default: [
         {
-            navName: "Discover",
+            navName: "살펴보기",
             path: "/discover",
         },
         {
-            navName: "Trips",
+            navName: "여행",
             path: "/trips",
         },
         {
-            navName: "Community",
+            navName: "커뮤니티",
             path: "/community",
         },
         {
-            navName: "More",
+            navName: "더 보기",
             path: "/more",
         },
     ],
