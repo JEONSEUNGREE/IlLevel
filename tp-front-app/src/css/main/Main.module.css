@@ -1,0 +1,121 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 상단 네비게이션 */
+.navbar_wrap {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 999;
+}
+
+.navbar_box {
+    /* border: 1px solid red; */
+    width: 73%;
+    height: 60px;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0);
+    background-color: #ffffff;
+}
+
+.navbar_logo {
+    /* border: 1px solid red; */
+    width: 188px;
+    top: 50%;
+    position: relative;
+    transform: translate(0, -50%);
+    float: left;
+    cursor: pointer;
+}
+
+.navbar_menu_wrap {
+    /* border: 1px solid green;
+    box-sizing: border-box; */
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+}
+
+.navbar_menu {
+    /* border: 1px solid red;
+    box-sizing: border-box; */
+    width: 25%;
+    height: 100%;
+    float: left;
+    list-style: none;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.navbar_sign {
+    border: none;
+    border-radius: 20px;
+    width: 7%;
+    height: 40px;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    float: right;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.0em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-search-area {
+    height: 150px;
+    width: 100%;
+    background-color: purple;
+    text-align: -webkit-center;
+}
+
+.main-recent-search-area{
+    height: 150px;
+    width: 100%;
+    background-color: goldenrod;
+}
+
+.main-rcm-food-area{
+    height: 400px;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-rcm-local-area{
+    height: 400px;
+    width: 100%;
+    background-color: darkred;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-most-local-area{
+    height: 500px;
+    width: 100%;
+    background-color: skyblue;
+    text-align: -webkit-center;
+}
+
+.main-guide-area {
+    height: 400px;
+    width: 100%;
+    background-color: yellow;
+    text-align: -webkit-center;
+}
+

@@ -1,23 +1,27 @@
 import React from "react";
-import centerLogo from "../img/main/centerLogo.svg";
 import { useRecoilValue } from "recoil";
 import { navListState } from "../state/layout/NavBarState";
 import NavForm from "./NavForm";
+import logoTitle from "../img/main/logoTitle.svg";
+import styles from "../css/main/Main.module.css";
 
 export default function NavBar() {
     const navList = useRecoilValue(navListState);
 
     return (
         <div>
-            <nav className="main-navbar-pos">
+            <nav className={styles.navbar_box}>
                 <img
-                    className="main-header-left-logo"
-                    src={centerLogo}
+                    className={styles.navbar_logo}
+                    src={logoTitle}
                     alt="TripPenguinLogo"
                 />
-                {navList.map((item) => (
-                    <NavForm item={item} key={item.navName} />
-                ))}
+                <ul className={styles.navbar_menu_wrap}>
+                    {navList.map((item) => (
+                        <NavForm item={item} key={item.navName} />
+                    ))}
+                </ul>
+                <button className={styles.navbar_sign}>로그인</button>
             </nav>
         </div>
     );
