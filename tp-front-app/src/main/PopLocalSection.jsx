@@ -12,7 +12,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-export default function MostLocalSection() {
+export default function PopLocalSection() {
     return (
         <div className="main-most-local-area">
             <Card sx={{ maxWidth: 1500 }}>

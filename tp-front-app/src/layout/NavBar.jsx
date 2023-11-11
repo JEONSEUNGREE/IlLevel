@@ -21,7 +21,7 @@ export default function NavBar() {
                         <NavForm item={item} key={item.navName} />
                     ))}
                 </ul>
-                <button className={styles.navbar_sign}>로그인</button>
+                <button className={styles.navbar_sign_button}>로그인</button>
             </nav>
         </div>
     );

@@ -3,10 +3,10 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../layout/Header";
 import SearchSection from "./SearchSection";
-import RecentSearchSection from "./RecentSearchSection";
+// import RecentSearchSection from "./RecentSearchSection";
 import RcmLocalSection from "./RcmLocalSection";
 import RcmFoodSection from "./RcmFoodSection";
-import MostLocalSection from "./MostLocalSection";
+import PopLocalSection from "./PopLocalSection";
 import GuideSection from "./GuideSection";
 
 export default function MainPage() {
@@ -27,10 +27,10 @@ export default function MainPage() {
       </Modal> */}
             <Header />
             <SearchSection />
-            <RecentSearchSection />
+            {/* <RecentSearchSection /> */}
             <RcmLocalSection />
             <RcmFoodSection />
-            <MostLocalSection />
+            <PopLocalSection />
             <GuideSection />
             <Outlet />
         </div>

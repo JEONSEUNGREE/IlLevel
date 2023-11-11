@@ -7,8 +7,7 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import PropTypes from "prop-types";
 
 const RcmLocalCard = ({ props }) => {
-    // https://images.mypetlife.co.kr/content/uploads/2021/10/19151330/corgi-g1a1774f95_1280-1024x682.jpg
-    const { maxWidth, imageUrl, height, title, contents } = props;
+    const { maxWidth, height, imageUrl, title, contents } = props;
 
     return (
         <Card sx={{ maxWidth: maxWidth }}>
@@ -40,8 +39,8 @@ const RcmLocalCard = ({ props }) => {
 RcmLocalCard.propTypes = {
     props: PropTypes.object,
     maxWidth: PropTypes.number,
-    imageUrl: PropTypes.string,
     height: PropTypes.number,
+    imageUrl: PropTypes.string,
     title: PropTypes.string,
     contents: PropTypes.string,
 };
