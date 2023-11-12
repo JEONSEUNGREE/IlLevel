@@ -62,42 +62,42 @@ const rcmFoodListState = atom({
         {
             maxWidth: 300,
             imageUrl:
-                "https://images.mypetlife.co.kr/content/uploads/2021/10/19151330/corgi-g1a1774f95_1280-1024x682.jpg",
+                "https://i0.wp.com/picjumbo.com/wp-content/uploads/cute-yorkshire-terrier-puppy.jpg?w=2210&quality=70",
             height: 200,
-            title: "빵굽 웰시코기",
-            contents: "css 왜 공부해야되는지 설명해줄분 구함",
+            title: "호캉스",
+            contents: "텔레비전 중독",
         },
         {
             maxWidth: 300,
             imageUrl:
-                "https://png.pngtree.com/background/20230610/original/pngtree-two-white-puppies-with-their-mouths-moving-picture-image_3054164.jpg",
+                "https://i0.wp.com/picjumbo.com/wp-content/uploads/combing-the-head-of-yorkshire-terrier.jpg?w=2210&quality=70",
             height: 200,
-            title: "하얀 털뭉치들",
-            contents: "css 왜 공부해야되는지 설명해줄분 구함",
+            title: "따갑다",
+            contents: "주인아 살살 빗으랬지",
         },
         {
             maxWidth: 300,
             imageUrl:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0oqjc7nbofzwGVYyKvxSgmWNhfYlwbrGlJw&usqp=CAU",
+                "https://images.pexels.com/photos/981062/pexels-photo-981062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             height: 200,
-            title: "냐오미",
-            contents: "css 왜 공부해야되는지 설명해줄분 구함",
+            title: "교수님 연구실",
+            contents: "특징 : 모니터 화면 포커 게임",
         },
         {
             maxWidth: 300,
             imageUrl:
-                "https://mblogthumb-phinf.pstatic.net/MjAyMjAxMjVfMTcw/MDAxNjQzMTAyOTg1NjY2.CnGtAfHsMeqzKuAXan3hk102JU0Cw6wM77Hr61YY81gg.BQQMgu9l_SEmNrUAkVF3SQ-VfRnbWZB3LX7cWXwFdmMg.JPEG.minziminzi128/IMG_7363.JPG?type=w800",
+                "https://images.pexels.com/photos/1629780/pexels-photo-1629780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             height: 200,
-            title: "카오스 냐오미",
-            contents: "css 왜 공부해야되는지 설명해줄분 구함",
+            title: "지그시",
+            contents: "자네가 개껌을 빼돌렸나",
         },
         {
             maxWidth: 300,
             imageUrl:
-                "https://mblogthumb-phinf.pstatic.net/MjAyMjAxMjVfMTAg/MDAxNjQzMTAyOTg0ODA5.q_DQWr2DSXnLYALcvh7u9o8DLZbD6OixJWa_Y7bwv4Yg.IHgg6s43ZkW0jRw3kKxr0WWrccnHJ0HflOYCbDVdGwog.JPEG.minziminzi128/IMG_7369.JPG?type=w800",
+                "https://images.pexels.com/photos/1174081/pexels-photo-1174081.jpeg",
             height: 200,
-            title: "만렙 프로그래머",
-            contents: "css 왜 공부해야되는지 설명해줄분 구함",
+            title: "킁킁",
+            contents: "고기 먹었구나",
         },
     ],
 });

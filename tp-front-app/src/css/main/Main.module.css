@@ -235,3 +235,47 @@
 .rcm_local_list {
     float: left;
 }
+
+
+
+/* 음식 추천 영역 */
+.rcm_food_wrap {
+    /* border: 1px solid red; */
+    position: relative;
+    margin-top: 50px;
+    width: 73%;
+    height: 400px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.rcm_food_h2, .rcm_food_span {
+    /* border: 1px solid red; */
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.rcm_food_more_button {
+    border: none;
+    position: relative;
+    top: -33px;
+    float: right;
+    background-color: transparent;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.rcm_food_list_wrap {
+    /* border: 1px solid red; */
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.rcm_food_list {
+    float: left;
+}
