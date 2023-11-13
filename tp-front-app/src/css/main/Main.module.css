@@ -194,11 +194,59 @@
 
 
 
+/* 가이드 영역 */
+.guide_wrap {
+    /* border: 1px solid red; */
+    border-radius: 15px;
+    position: relative;
+    margin-top: 50px;
+    width: 73%;
+    height: 500px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: url("https://cdn.newspenguin.com/news/photo/202101/3899_12249_529.jpg") no-repeat center/100%;
+}
+
+.guide_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 30px;
+    bottom: 120px;
+    color: #ffffff;
+    font-size: 2.5em;
+}
+
+.guide_span {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 30px;
+    bottom: 100px;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.guide_button {
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    width: 135px;
+    height: 48px;
+    left: 30px;
+    bottom: 30px;
+    float: right;
+    background-color: #ffffff;
+    font-size: 1.0em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
 /* 지역 추천 영역 */
 .rcm_local_wrap {
     /* border: 1px solid red; */
     position: relative;
-    margin-top: 50px;
+    margin-top: 70px;
     width: 73%;
     height: 400px;
     left: 50%;
@@ -278,4 +326,63 @@
 
 .rcm_food_list {
     float: left;
+}
+
+
+
+/* 하단 정보 영역*/
+.footer_wrap {
+    /* border: 1px solid red; */
+    position: relative;
+    margin-top: 70px;
+    width: 100%;
+    height: 145px;
+    background-color: #e3f3fc;
+}
+
+.footer_menu_wrap {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 73%;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer_logo {
+    /* border: 1px solid red; */
+    width: 40px;
+    height: 40px;
+}
+
+.footer_span_1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50px;
+    font-size: 0.75em;
+}
+
+.footer_list_wrap {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    list-style: none;
+    font-weight: bold;
+}
+
+.footer_list_wrap li {
+    margin-right: 10px;
+    float: left;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer_span_2 {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 0;
+    top: 45px;
+    font-size: 0.75em;
 }
