@@ -1,57 +1,16 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+import styles from "../css/main/Main.module.css";
 
 export default function GuideSection() {
     return (
-        <div className="main-guide-area">
-            <Card sx={{ maxWidth: 1500 }}>
-                <CardHeader
-                    avatar={
-                        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                            R
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton aria-label="settings">
-                            <MoreVertIcon />
-                        </IconButton>
-                    }
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
-                />
-                <CardMedia
-                    component="img"
-                    height="300"
-                    image="https://cdn.newspenguin.com/news/photo/202101/3899_12249_529.jpg"
-                    alt="Paella dish"
-                />
-                <CardContent>
-                    <Typography variant="body2" color="text.secondary">
-                        This impressive paella is a perfect party dish and a fun
-                        meal to cook together with your guests. Add 1 cup of
-                        frozen peas along with the mussels, if you like.
-                    </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
-                    </IconButton>
-                    <IconButton aria-label="share">
-                        <ShareIcon />
-                    </IconButton>
-                </CardActions>
-            </Card>
+        <div className={styles.guide_wrap}>
+            <h1 className={styles.guide_h1}>
+                올해 최강의 고양이를 같이 보아요
+            </h1>
+            <span className={styles.guide_span}>
+                연말연시 최고의 추천 냥이를 확인하세요
+            </span>
+            <button className={styles.guide_button}>가이드 보기</button>
         </div>
     );
 }
