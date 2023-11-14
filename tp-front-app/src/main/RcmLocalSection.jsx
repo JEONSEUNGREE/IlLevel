@@ -8,17 +8,19 @@ export default function RcmLocalSection() {
     const rcmLocalList = useRecoilValue(rcmLocalListState);
 
     return (
-        <div className={styles.rcm_local_wrap}>
-            <h2 className={styles.rcm_local_h2}>스포트라이트: 말티즈</h2>
-            <span className={styles.rcm_local_span}>
+        <div className={styles.rcm_wrap}>
+            <h2 className={styles.rcm_h2}>추천 여행 : 말티즈</h2>
+            <span className={styles.rcm_span}>
                 귀여운 멍멍이들을 둘러보세요.
             </span>
-            <button className={styles.rcm_local_more_button}>더 보기</button>
-            <ul className={styles.rcm_local_list_wrap}>
+            <button className={styles.rcm_more_button}>더 보기</button>
+            <ul className={styles.rcm_list_wrap}>
                 {rcmLocalList.map((item) => (
                     <RcmCard props={item} key={item.imageUrl} />
                 ))}
             </ul>
+            <span className={styles.rcm_carousel_left}>←</span>
+            <span className={styles.rcm_carousel_right}>→</span>
         </div>
     );
 }

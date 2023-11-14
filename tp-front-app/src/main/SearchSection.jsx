@@ -3,6 +3,7 @@ import { useRecoilValue } from "recoil";
 import { searchListState } from "../state/main/SearchListState";
 import SearchForm from "./search/SearchForm";
 import styles from "../css/main/Main.module.css";
+import search from "../img/main/search.svg";
 
 export default function SearchSection() {
     const searchList = useRecoilValue(searchListState);
@@ -16,6 +17,11 @@ export default function SearchSection() {
                 ))}
             </ul>
             <div className={styles.search_bar_wrap}>
+                <img
+                    className={styles.search_bar_icon}
+                    src={search}
+                    alt="TripPenguinLogo"
+                />
                 <input
                     type="text"
                     className={styles.search_bar_input}

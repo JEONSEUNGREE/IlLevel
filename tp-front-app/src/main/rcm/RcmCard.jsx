@@ -1,38 +1,23 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
 import PropTypes from "prop-types";
+import styles from "../../css/main/Main.module.css";
 
 const RcmLocalCard = ({ props }) => {
-    const { maxWidth, height, imageUrl, title, contents } = props;
+    const { imageUrl, title, contents } = props;
 
     return (
-        <Card sx={{ maxWidth: maxWidth }}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height={height}
-                    image={imageUrl}
-                    alt="green iguana"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {contents}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Button size="small" color="primary">
-                    Share
-                </Button>
-            </CardActions>
-        </Card>
+        <li className={styles.card_wrapper}>
+            <img className={styles.card_img} src={imageUrl} alt="image" />
+            <div className={styles.card_like}>
+                <span>♡</span>
+            </div>
+            <div className={styles.card_title}>{title}</div>
+            <div>
+                <span className={styles.card_star}>★★★★☆</span>
+                <span className={styles.card_count}>231,114</span>
+            </div>
+            <div className={styles.card_inform}>{contents}</div>
+        </li>
     );
 };
 
