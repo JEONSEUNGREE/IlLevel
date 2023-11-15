@@ -71,19 +71,19 @@ const rcmFoodListState = atom({
         },
         {
             imageUrl:
-                "https://images.pexels.com/photos/8121154/pexels-photo-8121154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://cdn.pixabay.com/photo/2019/12/13/19/49/dog-food-4693738_1280.jpg",
             title: "오색 개껌",
             contents: "채소향 가득",
         },
         {
             imageUrl:
-                "https://cdn.pixabay.com/photo/2016/06/06/18/29/meat-skewer-1440105_1280.jpg",
+                "https://cdn.pixabay.com/photo/2017/07/10/19/14/grilling-2491119_1280.jpg",
             title: "꼬치요리",
             contents: "특징 : 고기 없음",
         },
         {
             imageUrl:
-                "https://images.unsplash.com/photo-1625631980644-062c9a959279?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://cdn.pixabay.com/photo/2015/08/27/14/11/grill-910541_1280.jpg",
             title: "고기요리",
             contents: "맛있어 보이는구만",
         },
