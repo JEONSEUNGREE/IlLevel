@@ -27,6 +27,18 @@ const rcmLocalListState = atom({
             title: "손자 기다리는 할머니",
             contents: "특징 : 손을 유심히 살펴보는 스타일",
         },
+        {
+            imageUrl:
+                "https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg",
+            title: "먼지",
+            contents: "미묘하게 말 안 듣게 생김",
+        },
+        {
+            imageUrl:
+                "https://cdn.pixabay.com/photo/2016/01/05/17/57/dog-1123026_1280.jpg",
+            title: "깨끗",
+            contents: "눈물 자국 없는 말티즈",
+        },
     ],
 });
 
@@ -57,6 +69,18 @@ const rcmPlayListState = atom({
             title: "지그시",
             contents: "자네가 개껌을 빼돌렸나",
         },
+        {
+            imageUrl:
+                "https://i0.wp.com/picjumbo.com/wp-content/uploads/cute-yorkshire-terrier-puppy.jpg?w=2210&quality=70",
+            title: "호캉스",
+            contents: "텔레비전 중독",
+        },
+        {
+            imageUrl:
+                "https://i0.wp.com/picjumbo.com/wp-content/uploads/combing-the-head-of-yorkshire-terrier.jpg?w=2210&quality=70",
+            title: "따갑다",
+            contents: "주인아 살살 빗으랬지",
+        },
     ],
 });
 
@@ -86,6 +110,18 @@ const rcmFoodListState = atom({
                 "https://cdn.pixabay.com/photo/2015/08/27/14/11/grill-910541_1280.jpg",
             title: "고기요리",
             contents: "맛있어 보이는구만",
+        },
+        {
+            imageUrl:
+                "https://images.pexels.com/photos/8434641/pexels-photo-8434641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            title: "뼈다귀 사료",
+            contents: "고기맛이 일품",
+        },
+        {
+            imageUrl:
+                "https://cdn.pixabay.com/photo/2019/12/13/19/49/dog-food-4693738_1280.jpg",
+            title: "오색 개껌",
+            contents: "채소향 가득",
         },
     ],
 });
