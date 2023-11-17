@@ -11,23 +11,26 @@ export default function SearchSection() {
     return (
         <div className={styles.search_wrap}>
             <h1 className={styles.search_message}>어디로 가시나요?</h1>
-            <ul className={styles.search_menu_wrap}>
-                {searchList.map((item) => (
-                    <SearchForm item={item} key={item.searchName} />
-                ))}
-            </ul>
-            <div className={styles.search_bar_wrap}>
-                <img
-                    className={styles.search_bar_icon}
-                    src={search}
-                    alt="TripPenguinLogo"
-                />
-                <input
-                    type="text"
-                    className={styles.search_bar_input}
-                    placeholder="여행지, 즐길거리, 호텔 등"
-                />
-                <button className={styles.search_bar_button}>검색</button>
+            <div className={styles.search_interactive_wrap}>
+                <ul className={styles.search_menu_wrap}>
+                    {searchList.map((item) => (
+                        <SearchForm item={item} key={item.searchName} />
+                    ))}
+                </ul>
+                <div className={styles.search_bar_wrap}>
+                    <img
+                        className={styles.search_bar_icon}
+                        src={search}
+                        alt="TripPenguinLogo"
+                    />
+                    <input
+                        type="text"
+                        className={styles.search_bar_input}
+                        placeholder="여행지, 즐길거리, 호텔 등"
+                    />
+                    <div className={styles.search_bar_line}></div>
+                    <button className={styles.search_bar_button}>검색</button>
+                </div>
             </div>
         </div>
     );

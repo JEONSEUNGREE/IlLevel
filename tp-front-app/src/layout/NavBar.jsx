@@ -2,6 +2,7 @@ import React from "react";
 import { useRecoilValue } from "recoil";
 import { navListState } from "../state/layout/NavBarState";
 import NavForm from "./NavForm";
+import hamburgerMenu from "../img/main/hamburgerMenu.svg";
 import logoTitle from "../img/main/logoTitle.svg";
 import styles from "../css/main/Main.module.css";
 
@@ -11,6 +12,11 @@ export default function NavBar() {
     return (
         <div>
             <nav className={styles.navbar_box}>
+                <img
+                    className={styles.NavBar_hamburger}
+                    src={hamburgerMenu}
+                    alt="hamburgerMenu"
+                />
                 <img
                     className={styles.navbar_logo}
                     src={logoTitle}
