@@ -3,7 +3,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../layout/Header";
 import SearchSection from "./SearchSection";
-// import RecentSearchSection from "./RecentSearchSection";
+// import RecentSection from "./RecentSection";
 import GuideSection from "./GuideSection";
 import RcmLocalSection from "./RcmLocalSection";
 import RcmPlaySection from "./RcmPlaySection";
@@ -28,7 +28,7 @@ export default function MainPage() {
       </Modal> */}
             <Header />
             <SearchSection />
-            {/* <RecentSearchSection /> */}
+            {/* <RecentSection /> */}
             <GuideSection />
             <RcmLocalSection />
             <RcmPlaySection />
