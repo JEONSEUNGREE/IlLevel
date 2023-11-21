@@ -22,8 +22,14 @@ export default function RcmLocalSection() {
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
-            { breakpoint: 1020, settings: { slidesToShow: 3 } },
-            { breakpoint: 755, settings: { slidesToShow: 2 } },
+            {
+                breakpoint: 1020,
+                settings: { slidesToShow: 3, slidesToScroll: 3 },
+            },
+            {
+                breakpoint: 755,
+                settings: { slidesToShow: 2, slidesToScroll: 2 },
+            },
         ],
     };
 
