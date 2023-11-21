@@ -580,10 +580,6 @@
 
 
     /* 추천 영역 (공통 컴포넌트) */
-    .card_wrapper {
-        border: 1px solid green;
-    }
-
     .card_wrapper:nth-child(1), .card_wrapper:nth-child(2), .card_wrapper:nth-child(3) {
         margin-right: 1%;
     }
@@ -675,13 +671,6 @@
         /* border: 1px solid purple; */
         background-size: cover;
     }
-
-
-
-    /* 추천 영역 (공통 컴포넌트) */
-    .card_wrapper {
-        border: 1px solid purple;
-    }
 }
 
 
@@ -761,13 +750,6 @@
     .guide_wrap {
         /* border: 1px solid purple; */
         background-size: cover;
-    }
-
-
-
-    /* 추천 영역 (공통 컴포넌트) */
-    .card_wrapper {
-        border: 1px solid orange;
     }
 }
 
