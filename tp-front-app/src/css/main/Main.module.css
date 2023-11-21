@@ -172,6 +172,15 @@
     color: #757575;
 }
 
+.search_menu.clicked:after {
+    border-bottom: 2px solid #757575;
+    margin: 8px auto;
+    content: "";
+    display: block;
+    width: 100%;
+    color: #757575;
+}
+
 .search_bar_wrap {
     border: 2px solid #e0e0e0;
     border-radius: 30px;
