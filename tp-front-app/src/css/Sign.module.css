@@ -1,0 +1,73 @@
+.sign_modal_wrapper {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    position: absolute;
+    width: 500px;
+    height: 610px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #ffffff;
+    box-shadow: 0 0 2px 1px #e0e0e0;
+}
+
+.sign_modal_x {
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.sign_modal_logo {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50px;
+    top: 60px;
+    width: 50px;
+    height: 50px;
+}
+
+.sign_modal_h2 {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50px;
+    top: 70px;
+    font-size: 1.7em;
+}
+
+.sign_modal_ul {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50%;
+    top: 150px;
+    width: 400px;
+    transform: translate(-50%, 0);
+}
+
+.sign_modal_ul li {
+    border: 2px solid #000000;
+    border-radius: 25px;
+    position: relative;
+    margin-bottom: 25px;
+    height: 45px;
+    list-style: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.sign_modal_span {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 400px;
+    left: 50px;
+    top: 150px;
+    font-size: 0.75em;
+}
