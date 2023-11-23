@@ -14,7 +14,7 @@ const SearchForm = ({ item, handleSearch, selectedItem }) => {
             onClick={() => handleSearch(item)}
         >
             <img
-                src={`./img/search${item.id + 1}.png`}
+                src={`./img/main/search${item.id + 1}.png`}
                 className={styles.search_menu_img}
             />
             {item.searchName}

@@ -19,6 +19,11 @@ export default function NavBar() {
         }
     };
 
+    // 닫기 버튼 클릭 시 모달창 닫기
+    const closeSignInModal = () => {
+        setSignModal(false);
+    };
+
     useEffect(() => {
         document.addEventListener("mousedown", closeModal);
         return () => {
@@ -54,7 +59,7 @@ export default function NavBar() {
             {signModal && (
                 <div className={styles.modal_overlay}>
                     <div className={styles.modal} ref={modalRef}>
-                        <SignIn />
+                        <SignIn closeSignInModal={closeSignInModal} />
                     </div>
                 </div>
             )}
