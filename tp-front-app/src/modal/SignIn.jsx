@@ -1,11 +1,23 @@
 import React from "react";
-import styles from "../css/Sign.module.css";
+import { useRecoilValue } from "recoil";
+import { signInListState } from "../state/modal/SignInListState";
+import SignInForm from "./SignInForm";
+import PropTypes from "prop-types";
+import styles from "../css/modal/Sign.module.css";
 import logoIcon from "../img/main/logoIcon.svg";
 
-export default function SignIn() {
+export default function SignIn({ closeSignInModal }) {
+    const signInList = useRecoilValue(signInListState);
+
+    const handleModal = () => {
+        closeSignInModal();
+    };
+
     return (
         <div className={styles.sign_modal_wrapper}>
-            <div className={styles.sign_modal_x}>X</div>
+            <div className={styles.sign_modal_x} onClick={handleModal}>
+                ×
+            </div>
             <div>
                 <img
                     className={styles.sign_modal_logo}
@@ -13,14 +25,14 @@ export default function SignIn() {
                     alt="TripPenguinLogo"
                 />
                 <h2 className={styles.sign_modal_h2}>
-                    로그인하여 트립펭귄을 이용하세요.
+                    {`로그인하여 
+                    트립펭귄을 이용하세요.`}
                 </h2>
             </div>
             <ul className={styles.sign_modal_ul}>
-                <li>구글 로그인</li>
-                <li>네이버 로그인</li>
-                <li>카카오 로그인</li>
-                <li>이메일 로그인</li>
+                {signInList.map((item) => (
+                    <SignInForm item={item} key={item.signInName} />
+                ))}
             </ul>
             <div className={styles.sign_modal_span}>
                 <span>
@@ -35,3 +47,8 @@ export default function SignIn() {
         </div>
     );
 }
+
+// props의 타입을 정의하고 유효성을 검사
+SignIn.propTypes = {
+    closeSignInModal: PropTypes.func,
+};

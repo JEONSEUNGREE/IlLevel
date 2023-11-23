@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .sign_modal_wrapper {
     /* border: 1px solid red; */
     border-radius: 10px;
@@ -17,6 +24,8 @@
     top: 15px;
     width: 25px;
     height: 25px;
+    font-family: 'SUIT-Regular';
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     line-height: 25px;
@@ -38,13 +47,14 @@
     left: 50px;
     top: 70px;
     font-size: 1.7em;
+    white-space: pre-line;
 }
 
 .sign_modal_ul {
     /* border: 1px solid red; */
     position: relative;
     left: 50%;
-    top: 150px;
+    top: 100px;
     width: 400px;
     transform: translate(-50%, 0);
 }
@@ -56,11 +66,27 @@
     margin-bottom: 25px;
     height: 45px;
     list-style: none;
-    font-size: 1.1em;
     font-weight: bold;
     text-align: center;
     line-height: 45px;
     cursor: pointer;
+}
+
+.sign_modal_img {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+}
+
+.sign_modal_ul li:nth-child(2) img, .sign_modal_ul li:nth-child(3) img {
+    /* border: 1px solid red; */
+    left: 17.5px;
+    width: 27px;
+    height: 27px;
 }
 
 .sign_modal_span {
@@ -68,6 +94,6 @@
     position: relative;
     width: 400px;
     left: 50px;
-    top: 150px;
+    top: 110px;
     font-size: 0.75em;
 }
