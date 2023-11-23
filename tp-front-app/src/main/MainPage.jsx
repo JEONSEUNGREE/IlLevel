@@ -8,7 +8,7 @@ import GuideSection from "./GuideSection";
 import RcmLocalSection from "./RcmLocalSection";
 import RcmPlaySection from "./RcmPlaySection";
 import RcmFoodSection from "./RcmFoodSection";
-import Footer from "./Footer";
+import Footer from "../layout/Footer";
 
 export default function MainPage() {
     return (
