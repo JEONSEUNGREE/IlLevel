@@ -1,7 +1,8 @@
 // children 넘길시 Outlet 필요
 import { Outlet } from "react-router-dom";
 import MainPage from "../main/MainPage";
-import { main, about } from "../util/CommonUri";
+import ProfilePage from "../profile/ProfilePage";
+import { main, about, profile } from "../util/CommonUri";
 
 const mainPage = {
     path: main,
@@ -41,4 +42,13 @@ const aboutPage = {
     // ]
 };
 
-export { mainPage, aboutPage };
+const profilePage = {
+    path: profile,
+    element: (
+        <>
+            <ProfilePage />
+        </>
+    ),
+};
+
+export { mainPage, aboutPage, profilePage };
