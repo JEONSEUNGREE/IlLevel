@@ -93,13 +93,13 @@
     background-color: #f2f2f2;
 }
 
-.navbar_sign_button {
-    border: none;
-    border-radius: 20px;
+.navbar_profile_img {
+    /* border: 1px solid red; */
+    border-radius: 50%;
     position: relative;
-    width: 80px;
-    height: 40px;
-    right: 22.5px;
+    width: 42px;
+    height: 42px;
+    right: 30px;
     top: 50%;
     transform: translate(0, -50%);
     float: right;
@@ -110,9 +110,111 @@
     cursor: pointer;
 }
 
-.navbar_sign_button:hover {
+.navbar_profile_img:hover {
     background-color: #333333;
 }
+
+
+
+/* 커버 사진 영역 */
+.cover_img {
+    /* border: 1px solid red; */
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: 250px;
+    background-color: #e0e0e0;
+}
+
+.cover_message {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* 프로필 정보 영역 */
+.info_wrapper {
+    border: 1px solid red;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 1230px;
+    height: 210px;
+    background-color: #ffffff;
+}
+
+.info_img {
+    border: 1px solid red;
+    border-radius: 50%;
+    position: relative;
+    left: 25px;
+    top: 25px;
+    width: 120px;
+    height: 120px;
+}
+
+.info_name {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 165px;
+    top: -100px;
+    width: 200px;
+}
+
+.info_list_wrapper {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 165px;
+    top: -70px;
+    width: 300px;
+}
+
+.info_list_name {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 25px;
+}
+
+.info_list_name li, .info_list_count li {
+    /* border: 1px solid red; */
+    list-style: none;
+    float: left;
+    font-weight: bold;
+}
+
+.info_list_name li {
+    margin-right: 15%;
+    font-size: 1.1em;
+}
+
+.info_list_count li {
+    margin-right: 29%;
+    color: #757575;
+    font-size: 1.4em;
+}
+
+.info_menu_wrapper {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 400px;
+    height: 30px;
+}
+
+.info_menu_wrapper li {
+    /* border: 1px solid red; */
+    position: relative;
+    left: -300px;
+    width: 20%;
+    list-style: none;
+    float: left;
+}
+
 
 
 /* 하단 정보 영역*/
