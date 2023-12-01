@@ -1,13 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "../css/profile/Profile.module.css";
 
-const StatusForm = ({ item }) => {
-    return <li>{item.statusName}</li>;
+const StatusForm = ({ item, onClick, selected }) => {
+    const handleClick = () => {
+        onClick();
+    };
+
+    return (
+        <li className={selected ? styles.clicked : ""} onClick={handleClick}>
+            {item.name}
+        </li>
+    );
 };
 
 StatusForm.propTypes = {
     item: PropTypes.object,
-    statusName: PropTypes.node,
+    name: PropTypes.node,
+    onClick: PropTypes.func.isRequired,
+    selected: PropTypes.bool.isRequired,
 };
 
 export default StatusForm;

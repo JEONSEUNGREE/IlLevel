@@ -1,29 +1,29 @@
 import { atom } from "recoil";
 
-const statusListState = atom({
-    key: "statusListState",
+const iconListState = atom({
+    key: "iconListState",
     default: [
         {
             id: 0,
-            name: "활동 피드",
+            name: "프로필 보기",
             path: "/",
         },
         {
             id: 1,
-            name: "여행",
+            name: "알림",
             path: "/",
         },
         {
             id: 2,
-            name: "리뷰",
+            name: "계정 정보",
             path: "/",
         },
         {
             id: 3,
-            name: "배지",
+            name: "로그아웃",
             path: "/",
         },
     ],
 });
 
-export { statusListState };
+export { iconListState };

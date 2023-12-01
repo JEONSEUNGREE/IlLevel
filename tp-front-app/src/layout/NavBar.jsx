@@ -5,12 +5,12 @@ import NavForm from "./NavForm";
 import hamburgerMenu from "../img/main/hamburgerMenu.svg";
 import logoTitle from "../img/main/logoTitle.svg";
 import styles from "../css/main/Main.module.css";
-import useModal from "../modal/ModalCore";
+import { backdropModal } from "../modal/ModalCore";
 import SignIn from "../modal/SignIn";
 
 export default function NavBar() {
     const navList = useRecoilValue(navListState);
-    const { isOpen, openModal, closeModal, modalRef } = useModal(false);
+    const { isOpen, openModal, closeModal, modalRef } = backdropModal(false);
 
     return (
         <div>
