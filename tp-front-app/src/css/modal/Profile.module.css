@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 프로필 아이콘 모달창 */
+.setting_wrapper {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 1185px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.setting_icon_modal_wrapper {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    width: 195px;
+    height: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 1.5px 3px 1px #e0e0e0;
+}
+
+.setting_icon_modal_ul {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 80%;
+    left: 45%;
+    transform: translate(-46%, 0);
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.setting_icon_modal_ul li {
+    /* border: 1px solid red; */
+    position: relative;
+    display: block;
+    padding-left: 5%;
+    width: 100%;
+    height: 42.5px;
+    line-height: 42.5px;
+}
+.setting_icon_modal_ul li:nth-child(1) {
+    margin-top: 15px;
+}
+
+.setting_icon_modal_ul li:hover {
+    background-color: #f2f2f2;
+}
+
+
+
+/* 프로필 설정 메뉴 모달창 */
+.setting_modal_wrapper {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    position: absolute;
+    right: 26px;
+    top: 60px;
+    width: 153px;
+    height: 170px;
+    background-color: #ffffff;
+    box-shadow: 0 1.5px 3px 1px #e0e0e0;
+}
+
+.setting_modal_ul {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    list-style: none;
+    color: #757575;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.setting_modal_ul li {
+    margin-top: 12px;
+}
+
+.setting_modal_ul li:hover {
+    color: #000000;
+}
+
+
+/* 커버 사진 선택 모달창 */
+.cover_select_modal_wrapper {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 770px;
+    height: 320px;
+    background-color: #ffffff;
+    box-shadow: 0 1.5px 3px 1px #e0e0e0;
+    z-index: 9;
+}
+
+.cover_select_modal_info {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 45px;
+    background-color: #f2f2f2;
+}
+
+.cover_select_modal_span {
+    /* border: 1px solid red; */
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 45px;
+}
+
+.cover_select_icon {
+    /* border: 1px solid red; */
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.cover_select_x {
+    /* border: 1px solid red; */
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 12.5px;
+    font-family: 'SUIT-Regular';
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cover_select_modal_content {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 85%;
+}
+
+.cover_select_modal_upload {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 655px;
+    height: 160px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.cover_select_modal_upload span {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 42.5%;
+    transform: translate(-50%);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+
+/* 프로필 수정 모달창 */
+.modify_wrapper {
+    /* border: 1px solid red; */
+    position: fixed;
+    top: -215px;
+    left: -345px;
+    width: 156%;
+    height: 100vh;
+    z-index: 99;
+}
+
+.modify_cover {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 250px;
+    background-color: #e0e0e0;
+}
+
+.modify_cover:hover {
+    background-color: #d6d6d6;
+}
+
+.modify_content {
+    /* border: 1px solid red; */
+    position: relative;
+    top: -135px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 720px;
+    height: 630px;
+    background-color: #ffffff;
+}
+
+.modify_img {
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    position: relative;
+    display: block;
+    left: 30px;
+    top: 30px;
+    width: 125px;
+    height: 125px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.modify_img:hover {
+    opacity: 0.8;
+}
+
+.modify_img_content {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.8;
+    cursor: default;
+}
+
+.modify_img_message {
+    /* border: 1px solid red; */
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 125px; 
+}
+
+.modify_input_span {
+    border: 1px solid red;
+    position: relative;
+    left: 170px;
+    top: 0;
+}
+
+.modify_input_name {
+    border: 1px solid red;
+    position: relative;
+    top: -70px;
+    width: 500px;
+    height: 40px;
+}
+
+.modify_input_city {
+    border: 1px solid red;
+    position: relative;
+    left: 150px;
+    top: -70px;
+    width: 500px;
+    height: 40px;
+}
+
+.modify_textarea {
+    border: 1px solid red;
+    position: relative;
+    left: 150px;
+    top: -70px;
+    width: 500px;
+    height: 40px;
+    resize: none;
+}
+
+.modify_button_cancel, .modify_button_save {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.modify_button_cancel {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+}
+
+.modify_button_save {
+    border: 1px solid red;
+    background-color: #000000;
+    color: #ffffff;
+}
