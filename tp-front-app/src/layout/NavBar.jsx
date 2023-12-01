@@ -1,35 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import { useRecoilValue } from "recoil";
 import { navListState } from "../state/layout/NavBarState";
 import NavForm from "./NavForm";
 import hamburgerMenu from "../img/main/hamburgerMenu.svg";
 import logoTitle from "../img/main/logoTitle.svg";
 import styles from "../css/main/Main.module.css";
+import useModal from "../modal/ModalCore";
 import SignIn from "../modal/SignIn";
 
 export default function NavBar() {
     const navList = useRecoilValue(navListState);
-    const [signModal, setSignModal] = useState(false);
-    const modalRef = useRef(null);
-
-    // 모달창 외부 클릭 시 닫기
-    const closeModal = (e) => {
-        if (modalRef.current && !modalRef.current.contains(e.target)) {
-            setSignModal(false);
-        }
-    };
-
-    // 닫기 버튼 클릭 시 모달창 닫기
-    const closeSignInModal = () => {
-        setSignModal(false);
-    };
-
-    useEffect(() => {
-        document.addEventListener("mousedown", closeModal);
-        return () => {
-            document.removeEventListener("mousedown", closeModal);
-        };
-    }, []);
+    const { isOpen, openModal, closeModal, modalRef } = useModal(false);
 
     return (
         <div>
@@ -51,15 +32,15 @@ export default function NavBar() {
                 </ul>
                 <button
                     className={styles.navbar_sign_button}
-                    onClick={() => setSignModal(true)}
+                    onClick={openModal}
                 >
                     로그인
                 </button>
             </nav>
-            {signModal && (
+            {isOpen && (
                 <div className={styles.modal_overlay}>
                     <div className={styles.modal} ref={modalRef}>
-                        <SignIn closeSignInModal={closeSignInModal} />
+                        <SignIn closeSignInModal={closeModal} />
                     </div>
                 </div>
             )}

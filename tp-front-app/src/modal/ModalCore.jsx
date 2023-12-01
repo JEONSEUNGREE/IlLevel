@@ -1,38 +1,29 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { useState, useEffect, useRef } from "react";
 
-const Modal = (props) => {
-    // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
-    const { open, close, header } = props;
+export default function modal(initialState = false) {
+    const [isOpen, setIsOpen] = useState(initialState);
+    const modalRef = useRef(null);
 
-    return (
-        // 모달이 열릴때 openModal 클래스가 생성된다.
-        <div className={open ? "openModal modal" : "modal"}>
-            {open ? (
-                <section>
-                    <header>
-                        {header}
-                        <button className="close" onClick={close}>
-                            &times;
-                        </button>
-                    </header>
-                    <main>{props.children}</main>
-                    <footer>
-                        <button className="close" onClick={close}>
-                            close
-                        </button>
-                    </footer>
-                </section>
-            ) : null}
-        </div>
-    );
-};
+    const openModal = () => {
+        setIsOpen(true);
+    };
 
-Modal.propTypes = {
-    open: PropTypes.bool,
-    close: PropTypes.bool,
-    header: PropTypes.node,
-    children: PropTypes.node,
-};
+    const closeModal = () => {
+        setIsOpen(false);
+    };
 
-export default Modal;
+    const handleClickOutside = (e) => {
+        if (modalRef.current && !modalRef.current.contains(e.target)) {
+            setIsOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    return { isOpen, openModal, closeModal, modalRef };
+}
