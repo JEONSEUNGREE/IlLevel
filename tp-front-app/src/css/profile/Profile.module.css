@@ -117,7 +117,7 @@
 
 
 /* 커버 사진 영역 */
-.cover_img {
+.cover_wrapper {
     /* border: 1px solid red; */
     position: relative;
     top: 60px;
@@ -126,10 +126,22 @@
     background-color: #e0e0e0;
 }
 
+.cover_img {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 45%;
+    top: 35%;
+    transform: translate(-30%, 0);
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
 .cover_message {
     /* border: 1px solid red; */
     position: relative;
-    left: 50%;
+    left: 45.5%;
+    top: 33%;
     transform: translate(-50%, 0);
     font-size: 0.9em;
     font-weight: bold;
@@ -150,13 +162,14 @@
 }
 
 .info_img {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 50%;
     position: relative;
     left: 25px;
     top: 25px;
     width: 120px;
     height: 120px;
+    background-color: #000000;
 }
 
 .info_name {
@@ -181,6 +194,12 @@
     height: 25px;
 }
 
+.info_list_count {
+    /* border: 1px solid red; */
+    width: 120%;
+    height: 25px;
+}
+
 .info_list_name li, .info_list_count li {
     /* border: 1px solid red; */
     list-style: none;
@@ -194,14 +213,24 @@
 }
 
 .info_list_count li {
-    margin-right: 29%;
     color: #757575;
     font-size: 1.4em;
 }
 
+.info_list_count li:nth-child(2) {
+    position: absolute;
+    left: 100px;
+}
+
+.info_list_count li:nth-child(3) {
+    position: absolute;
+    left: 200px;
+}
+
 .info_menu_wrapper {
     /* border: 1px solid red; */
-    position: relative;
+    position: absolute;
+    bottom: 5px;
     width: 400px;
     height: 30px;
 }
@@ -209,10 +238,51 @@
 .info_menu_wrapper li {
     /* border: 1px solid red; */
     position: relative;
-    left: -300px;
-    width: 20%;
+    margin-left: 20px;
+    margin-right: 10px;
     list-style: none;
     float: left;
+    color: #757575;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info_menu_wrapper li:hover {
+    color: #000000;
+}
+
+.info_modify {
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 155px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.info_modify span {
+    border-right: 1px solid #e0e0e0;
+    display: inline-block;
+    position: relative;
+    width: 110px;
+    height: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.info_modify img {
+    /* border: 1px solid red; */
+    display: inline-block;
+    position: relative;
+    left: 15px;
+    width: 12.5px;
+    height: 12.5px;
 }
 
 
