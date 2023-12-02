@@ -302,6 +302,7 @@
     font-size: 0.9em;
     font-weight: bold;
     line-height: 35px;
+    cursor: pointer;
 }
 
 .info_modify_img {
@@ -311,6 +312,7 @@
     left: 15px;
     width: 12.5px;
     height: 12.5px;
+    cursor: pointer;
 }
 
 
