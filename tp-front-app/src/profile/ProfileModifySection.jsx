@@ -5,7 +5,7 @@ import styles from "../css/profile/Profile.module.css";
 import ProfileModify from "../modal/ProfileModify";
 
 export default function ProfileModifySection() {
-    const { isOpen, openModal, modalRef } = backdropModal(false);
+    const { isOpen, openModal, closeModal, modalRef } = backdropModal(false);
 
     return (
         <span onClick={openModal}>
@@ -13,7 +13,7 @@ export default function ProfileModifySection() {
             {isOpen && (
                 <div className={styles.modal_overlay}>
                     <div className={styles.modal} ref={modalRef}>
-                        <ProfileModify />
+                        <ProfileModify closeModal={closeModal} />
                     </div>
                 </div>
             )}
