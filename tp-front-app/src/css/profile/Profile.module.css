@@ -237,7 +237,7 @@
     height: 30px;
 }
 
-.info_menu_wrapper li {
+.info_menu_li {
     /* border: 1px solid red; */
     position: relative;
     margin-left: 20px;
@@ -250,11 +250,11 @@
     cursor: pointer;
 }
 
-.info_menu_wrapper li:hover {
+.info_menu_li:hover {
     color: #000000;
 }
 
-.info_menu_wrapper li:hover:after {
+.info_menu_li:hover:after {
     border-bottom: 2px solid #88cffa;
     position: relative;
     left: -10px;
@@ -265,11 +265,11 @@
     width: 100%;
 }
 
-.info_menu_wrapper li.clicked {
+.info_menu_li.clicked {
     color: #000000;
 }
 
-.info_menu_wrapper li.clicked:after {
+.info_menu_li.clicked:after {
     border-bottom: 2px solid #88cffa;
     position: relative;
     left: -10px;

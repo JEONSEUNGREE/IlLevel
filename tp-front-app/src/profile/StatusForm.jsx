@@ -8,7 +8,12 @@ const StatusForm = ({ item, onClick, selected }) => {
     };
 
     return (
-        <li className={selected ? styles.clicked : ""} onClick={handleClick}>
+        <li
+            className={`${styles.info_menu_li} ${
+                selected ? styles.clicked : ""
+            }`}
+            onClick={handleClick}
+        >
             {item.name}
         </li>
     );
