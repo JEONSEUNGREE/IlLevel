@@ -2,7 +2,8 @@
 import { Outlet } from "react-router-dom";
 import MainPage from "../main/MainPage";
 import ProfilePage from "../profile/ProfilePage";
-import { main, about, profile } from "../util/CommonUri";
+import CompanyPage from "../company/CompanyPage";
+import { main, about, profile, company } from "../util/CommonUri";
 
 const mainPage = {
     path: main,
@@ -51,4 +52,13 @@ const profilePage = {
     ),
 };
 
-export { mainPage, aboutPage, profilePage };
+const companyPage = {
+    path: company,
+    element: (
+        <>
+            <CompanyPage />
+        </>
+    ),
+};
+
+export { mainPage, aboutPage, profilePage, companyPage };
