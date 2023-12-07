@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { infoListState } from "../state/profile/InfoState";
-import { statusListState } from "../state/profile/StatusState";
+import { userStatusListState } from "../state/profile/UserStatusState";
 import styles from "../css/profile/Profile.module.css";
 import setting from "../img/profile/setting.png";
 import InfoForm from "./InfoForm";
@@ -12,7 +12,7 @@ import ProfileModifyMenu from "../modal/ProfileModifyMenu";
 
 export default function ProfileInfo() {
     const infoList = useRecoilValue(infoListState);
-    const statusList = useRecoilValue(statusListState);
+    const statusList = useRecoilValue(userStatusListState);
     const { isOpen, openModal, modalRef } = useModal(false);
 
     const [selectedItem, setSelectedItem] = useState(statusList[0]);
@@ -29,7 +29,7 @@ export default function ProfileInfo() {
                     {infoList.map((item) => (
                         <InfoForm
                             item={item}
-                            key={item.infoName}
+                            key={item.id}
                             distinction="name"
                         />
                     ))}
@@ -38,7 +38,7 @@ export default function ProfileInfo() {
                     {infoList.map((item) => (
                         <InfoForm
                             item={item}
-                            key={item.infoCount}
+                            key={item.id}
                             distinction="count"
                         />
                     ))}
@@ -48,9 +48,9 @@ export default function ProfileInfo() {
                 {statusList.map((item) => (
                     <StatusForm
                         item={item}
-                        key={item.name}
+                        key={item.id}
                         onClick={() => handleStatus(item)}
-                        selected={selectedItem === item} // 상태에 따라 선택 여부 판단
+                        selected={selectedItem === item}
                     />
                 ))}
             </ul>

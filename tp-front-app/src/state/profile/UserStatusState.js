@@ -1,7 +1,7 @@
 import { atom } from "recoil";
 
-const statusListState = atom({
-    key: "statusListState",
+const userStatusListState = atom({
+    key: "userStatusListState",
     default: [
         {
             id: 0,
@@ -26,4 +26,4 @@ const statusListState = atom({
     ],
 });
 
-export { statusListState };
+export { userStatusListState };
