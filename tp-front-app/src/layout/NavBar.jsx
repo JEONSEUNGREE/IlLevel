@@ -27,7 +27,7 @@ export default function NavBar() {
                 />
                 <ul className={styles.navbar_menu_wrap}>
                     {navList.map((item) => (
-                        <NavForm item={item} key={item.navName} />
+                        <NavForm item={item} key={item.id} />
                     ))}
                 </ul>
                 <button

@@ -27,7 +27,7 @@ export default function NavBarSign() {
                 />
                 <ul className={styles.navbar_menu_wrap}>
                     {navList.map((item) => (
-                        <NavForm item={item} key={item.name} />
+                        <NavForm item={item} key={item.id} />
                     ))}
                 </ul>
                 <div
