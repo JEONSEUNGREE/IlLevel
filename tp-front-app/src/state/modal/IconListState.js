@@ -15,11 +15,6 @@ const iconListState = atom({
         },
         {
             id: 2,
-            name: "계정 정보",
-            path: "/",
-        },
-        {
-            id: 3,
             name: "로그아웃",
             path: "/",
         },

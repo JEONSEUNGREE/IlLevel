@@ -3,7 +3,7 @@ import { useRecoilValue } from "recoil";
 import PropTypes from "prop-types";
 import { modifyListState } from "../state/modal/ModifyListState";
 import styles from "../css/modal/Profile.module.css";
-import StatusForm from "../profile/StatusForm";
+import SettingForm from "../profile/SettingForm";
 
 export default function ProfileModifyMenu() {
     const statusList = useRecoilValue(modifyListState);
@@ -12,7 +12,7 @@ export default function ProfileModifyMenu() {
         <div className={styles.setting_modal_wrapper}>
             <ul className={styles.setting_modal_ul}>
                 {statusList.map((item) => (
-                    <StatusForm item={item} key={item.name} />
+                    <SettingForm item={item} key={item.id} />
                 ))}
             </ul>
         </div>
