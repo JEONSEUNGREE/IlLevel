@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "../css/modal/Sign.module.css";
 import logoIcon from "../img/main/logoIcon.svg";
-import SignUp from "./SignUp";
+import SignUpUser from "./SignUpUser";
+import SignUpCom from "./SignUpCom";
 import axios from "axios";
 import { server } from "../util/CommonVal";
 import { login } from "../util/CommonUri";
 
 export default function SignInEmail({ closeModal }) {
     const handleModal = () => {closeModal();};
-    const [signUpModal, setSignUpModal] = useState(false);
-    const showSignUp = () => {setSignUpModal(true);}
-    const closeSignUp = () => {setSignUpModal(false);}
+    const [signUpUserModal, setSignUpUserModal] = useState(false);
+    const [signUpComModal, setSignUpComModal] = useState(false);
+    const showSignUpUser = () => {setSignUpUserModal(true);}
+    const showSignUpCom = () => {setSignUpComModal(true)};
+    const closeSignUpUser = () => {setSignUpUserModal(false);}
+    const closeSignUpCom = () => {setSignUpComModal(false);}
     const closeAll = () => {
-        setSignUpModal(false);
+        setSignUpUserModal(false);
         closeModal();
     }
     
@@ -94,13 +98,16 @@ export default function SignInEmail({ closeModal }) {
                 onClick={handleSubmit}>로그인</button>
 
                 <span className={styles.sign_modal_signup}>
-                    {`아직 `}
                     <strong className={styles.sign_modal_strong}
-                    onClick={showSignUp}>회원가입</strong>
-                    을 하지 않으셨나요?
+                    onClick={showSignUpUser}>일반 회원가입</strong>
+                </span>
+                <span className={styles.sign_modal_signup}>
+                    <strong className={styles.sign_modal_strong}
+                    onClick={showSignUpCom}>기업 회원가입</strong>
                 </span>
             </div>
-        {signUpModal ? <SignUp closeAll={closeAll} closeSignUp={closeSignUp}/> : null}
+        {signUpUserModal ? <SignUpUser closeAll={closeAll} closeSignUp={closeSignUpUser}/> : null}
+        {signUpComModal ? <SignUpCom closeAll={closeAll} closeSignUp={closeSignUpCom}/> : null}
         </div>
     );
 }
