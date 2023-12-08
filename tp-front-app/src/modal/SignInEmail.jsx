@@ -5,6 +5,7 @@ import logoIcon from "../img/main/logoIcon.svg";
 import SignUp from "./SignUp";
 import axios from "axios";
 import { server } from "../util/CommonVal";
+import { login } from "../util/CommonUri";
 
 export default function SignInEmail({ closeModal }) {
     const handleModal = () => {closeModal();};
@@ -27,7 +28,7 @@ export default function SignInEmail({ closeModal }) {
                     type: type,
                 };
                 console.log(userData.userEmail);
-                const response = await axios.post(server + "/login", userData);
+                const response = await axios.post(server + login, userData);
                 console.log(response.data);
                 alert(response.data);
             } catch (error) {
