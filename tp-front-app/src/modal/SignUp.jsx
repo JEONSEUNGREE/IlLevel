@@ -4,6 +4,7 @@ import styles from "../css/modal/Sign.module.css";
 import logoIcon from "../img/main/logoIcon.svg";
 import axios from "axios";
 import { server } from "../util/CommonVal";
+import { signup } from "../util/CommonUri";
 
 export default function SignUp({ closeAll, closeSignUp }) {
     const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ export default function SignUp({ closeAll, closeSignUp }) {
         e.preventDefault();
         
         try {
-            const endpoint = server + "/signup";
+            const endpoint = server + signup;
             const response = await axios.post(endpoint, formData);
             console.log(response.data);
         } catch (error) {
