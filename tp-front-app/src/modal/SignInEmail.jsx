@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "../css/modal/Sign.module.css";
 import logoIcon from "../img/main/logoIcon.svg";
+import SignUp from "./SignUp";
 
 export default function SignInEmail({ closeModal }) {
     const handleModal = () => {closeModal();};
+    const [signUpModal, setSignUpModal] = useState(false);
+    const showSignUp = () => {setSignUpModal(true);}
+    const closeSignUp = () => {setSignUpModal(false);}
+    const closeAll = () => {
+        setSignUpModal(false);
+        closeModal();
+    }
     
     const [type, setType] = useState("ROLE_USER");
     const handleType = (type) => {setType(type);};
@@ -68,10 +76,11 @@ export default function SignInEmail({ closeModal }) {
                 <span className={styles.sign_modal_signup}>
                     {`아직 `}
                     <strong className={styles.sign_modal_strong}
-                    >회원가입</strong>
+                    onClick={showSignUp}>회원가입</strong>
                     을 하지 않으셨나요?
                 </span>
             </div>
+        {signUpModal ? <SignUp closeAll={closeAll} closeSignUp={closeSignUp}/> : null}
         </div>
     );
 }
