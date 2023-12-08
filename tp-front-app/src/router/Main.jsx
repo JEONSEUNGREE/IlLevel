@@ -4,7 +4,8 @@ import MainPage from "../main/MainPage";
 import ProfilePage from "../profile/ProfilePage";
 import CompanyPage from "../company/CompanyPage";
 import LoginPage from "../sign/LoginPage";
-import { main, login, about, profile, company } from "../util/CommonUri";
+import LogoutPage from "../sign/LogoutPage";
+import { main, login, logout, about, profile, company } from "../util/CommonUri";
 
 const mainPage = {
     path: main,
@@ -20,6 +21,15 @@ const loginPage = {
     element: (
         <>
             <LoginPage />
+        </>
+    ),
+};
+
+const logoutPage = {
+    path: logout,
+    element: (
+        <>
+            <LogoutPage />
         </>
     ),
 };
@@ -52,4 +62,4 @@ const companyPage = {
     ),
 };
 
-export { mainPage, loginPage, aboutPage, profilePage, companyPage };
+export { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage };
