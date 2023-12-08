@@ -24,25 +24,18 @@ export default function SignInEmail({ closeModal }) {
     const [type, setType] = useState("ROLE_USER");
     const handleType = (type) => {setType(type);};
     const handleSubmit = async () => {
-        if (type === "ROLE_USER") {
-            try {
-                const userData = {
-                    userEmail: document.getElementById("userEmail").value,
-                    userPwd: document.getElementById("userPwd").value,
-                    type: type,
-                };
-                console.log(userData.userEmail);
-                const response = await axios.post(server + login, userData);
-                console.log(response.data);
-                alert(response.data);
-            } catch (error) {
-                alert(error);
-                console.error("로그인 오류:", error);
-            }
-        } else if (type === "ROLE_COM") {
-            // 기업 회원 로그인 처리
-        } else if (type === "ROLE_ADMIN") {
-            // 관리자 로그인 처리
+        try {
+            const userData = {
+                userEmail: document.getElementById("userEmail").value,
+                userPwd: document.getElementById("userPwd").value,
+                type: type,
+            };
+    
+            const response = await axios.post(server + login, userData);
+            console.log(response.data);
+        } catch (error) {
+            alert(error);
+            console.error("이메일 로그인 오류:", error);
         }
     };
 
