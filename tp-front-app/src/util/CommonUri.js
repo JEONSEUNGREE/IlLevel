@@ -7,3 +7,4 @@ export const signup_com = "/com/signup";
 export const login = "/login";
 export const logout = "/logout";
 export const mypage = "/usr/mypage/profile";
+export const main_list = "/rec/room/mainList";
