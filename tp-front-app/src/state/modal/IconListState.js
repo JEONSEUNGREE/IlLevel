@@ -6,7 +6,7 @@ const iconListState = atom({
         {
             id: 0,
             name: "프로필 보기",
-            path: "/",
+            path: "/profile",
         },
         {
             id: 1,
@@ -16,7 +16,7 @@ const iconListState = atom({
         {
             id: 2,
             name: "로그아웃",
-            path: "/",
+            path: "/logout",
         },
     ],
 });
