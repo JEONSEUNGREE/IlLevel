@@ -1,13 +1,19 @@
-import React, { useCallback } from "react";
+import React, { useEffect, useCallback } from "react";
 import RcmCard from "./rcm/RcmCard";
 import { useRecoilValue } from "recoil";
-import { rcmLocalListState } from "../state/main/MainState";
+import { rcmLocalListState, useRcmLocalListState } from "../state/main/MainState";
 import styles from "../css/main/Main.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function RcmLocalSection() {
+    const fetchRcmLocalListState = useRcmLocalListState();
+
+    useEffect(() => {
+        fetchRcmLocalListState();
+    }, [fetchRcmLocalListState]);
+
     const rcmLocalList = useRecoilValue(rcmLocalListState);
 
     // react-slick 설정
@@ -42,7 +48,14 @@ export default function RcmLocalSection() {
             <button className={styles.rcm_more_button}>더 보기</button>
             <Slider {...settings} ref={slickRef}>
                 {rcmLocalList.map((item, index) => (
-                    <RcmCard props={item} key={index} />
+                    <RcmCard
+                    key={index}
+                    roomNm={item.roomNm}
+                    comName={item.comName}
+                    thumbNail={item.thumbNail}
+                    ratingAvg={item.ratingAvg}
+                    reviewCount={item.reviewCount}
+                />
                 ))}
             </Slider>
             <span className={styles.rcm_carousel_left} onClick={previous}>
