@@ -1,5 +1,6 @@
 import { atom } from "recoil";
 import { signGoogle, signNaver, signKakao } from "../../util/CommonVal";
+import SignInEmail from "../../modal/SignInEmail";
 
 const signInListState = atom({
     key: "signInListState",
@@ -22,7 +23,7 @@ const signInListState = atom({
         {
             id: 3,
             signInName: "이메일로 계속하기",
-            path: "/",
+            component: SignInEmail,
         },
     ],
 });

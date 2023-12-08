@@ -5,14 +5,18 @@
     font-style: normal;
 }
 
+
+
+/* 로그인 모달창 */
 .sign_modal_wrapper {
     /* border: 1px solid red; */
     border-radius: 10px;
-    position: absolute;
+    position: relative;
     width: 500px;
     height: 610px;
     left: 50%;
-    transform: translate(-50%, 0);
+    top: 50%;
+    transform: translate(-50%, 20%);
     background-color: #ffffff;
     box-shadow: 0 0 2px 1px #e0e0e0;
 }
@@ -54,12 +58,12 @@
     /* border: 1px solid red; */
     position: relative;
     left: 50%;
-    top: 100px;
+    top: 130px;
     width: 400px;
     transform: translate(-50%, 0);
 }
 
-.sign_modal_ul li {
+.sign_modal_li {
     border: 2px solid #000000;
     border-radius: 25px;
     position: relative;
@@ -82,18 +86,241 @@
     height: 20px;
 }
 
-.sign_modal_ul li:nth-child(2) img, .sign_modal_ul li:nth-child(3) img {
+.sign_modal_li:nth-child(2) img, .sign_modal_li:nth-child(3) img {
     /* border: 1px solid red; */
     left: 17.5px;
     width: 27px;
     height: 27px;
 }
 
-.sign_modal_span {
+
+
+/* 이메일 로그인 모달창 */
+.sign_email_modal_wrapper {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    position: relative;
+    margin-top: -555px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 500px;
+    height: 610px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px 1px #e0e0e0;
+    z-index: 999;
+}
+
+.sign_email_modal_logo {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50px;
+    top: 60px;
+    width: 50px;
+    height: 50px;
+}
+
+.sign_email_modal_h2 {
     /* border: 1px solid red; */
     position: relative;
-    width: 400px;
     left: 50px;
-    top: 110px;
-    font-size: 0.75em;
+    top: 122px;
+    font-size: 1.7em;
+    white-space: pre-line;
+}
+
+.sign_modal_label {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50px;
+    top: 140px;
+    width: 100px;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.sign_modal_span {
+    margin-left: 5px;
+}
+
+.sign_modal_input {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 225px;
+    transform: translate(-50%, 0);
+    width: 400px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.sign_modal_input:nth-of-type(2) {
+    top: 315px;
+}
+
+.sign_email_modal_span {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.sign_email_modal_input {
+    display: block;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 0 10px;
+    position: relative;
+    width: 380px;
+    height: 40px;
+    box-shadow: 0 0 2px 1px #e0e0e0;
+}
+
+.sign_email_modal_input:focus {
+    outline: none;
+}
+
+.sign_modal_forgot_password {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50px;
+    top: 400px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sign_modal_signin {
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    top: 450px;
+    transform: translate(-50%, 0);
+    width: 320px;
+    height: 57px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sign_modal_signup {
+    display: block;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 540px;
+    width: 250px;
+    transform: translate(-50%, 0);
+    white-space: pre-wrap;
+}
+
+.sign_modal_strong {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+/* 일반 회원가입 모달창 */
+.sign_up_modal_wrapper {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    top: -150px;
+    transform: translate(-50%, 0);
+    width: 500px;
+    height: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px 1px #e0e0e0;
+    z-index: 999;
+}
+
+.sign_up_modal_h2 {
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50px;
+    top: 122px;
+    font-size: 1.7em;
+    white-space: pre-line;
+}
+
+.sign_up_modal_div {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50px;
+    top: 210px;
+    width: 400px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.sign_up_modal_div:nth-of-type(3), .sign_up_modal_div:nth-of-type(4) {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    width: 38%;
+}
+
+.sign_up_modal_div:nth-of-type(4) {
+    left: 52%;
+}
+
+.sign_up_modal_div:nth-of-type(5), .sign_up_modal_div:nth-of-type(6),
+.sign_up_modal_div:nth-of-type(7), .sign_up_modal_div:nth-of-type(8) {
+    /* border: 1px solid red; */
+    position: relative;
+    margin-bottom: 15px;
+    top: 240px;
+    width: 85%;
+}
+
+.sign_up_modal_span {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.sign_up_modal_input {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 90%;
+    height: 40px;
+    box-shadow: 0 0 2px 1px #e0e0e0;
+}
+
+.sign_up_modal_input:focus {
+    outline: none;
+}
+
+.sign_up_modal_signin {
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    top: 650px;
+    transform: translate(-50%, 0);
+    width: 320px;
+    height: 57px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sign_up_modal_signup {
+    display: block;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 730px;
+    width: 130px;
+    transform: translate(-50%, 0);
+    text-align: center;
+    white-space: pre-wrap;
 }
