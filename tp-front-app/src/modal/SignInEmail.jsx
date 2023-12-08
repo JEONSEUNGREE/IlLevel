@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styles from "../css/modal/Sign.module.css";
 import logoIcon from "../img/main/logoIcon.svg";
 import SignUp from "./SignUp";
+import axios from "axios";
+import { server } from "../util/CommonVal";
 
 export default function SignInEmail({ closeModal }) {
     const handleModal = () => {closeModal();};
@@ -16,9 +18,22 @@ export default function SignInEmail({ closeModal }) {
     
     const [type, setType] = useState("ROLE_USER");
     const handleType = (type) => {setType(type);};
-    const handleLogin = async () => {
+    const handleSubmit = async () => {
         if (type === "ROLE_USER") {
-            // 일반 회원 로그인 처리
+            try {
+                const userData = {
+                    userEmail: document.getElementById("userEmail").value,
+                    userPwd: document.getElementById("userPwd").value,
+                    type: type,
+                };
+                console.log(userData.userEmail);
+                const response = await axios.post(server + "/login", userData);
+                console.log(response.data);
+                alert(response.data);
+            } catch (error) {
+                alert(error);
+                console.error("로그인 오류:", error);
+            }
         } else if (type === "ROLE_COM") {
             // 기업 회원 로그인 처리
         } else if (type === "ROLE_ADMIN") {
@@ -60,19 +75,23 @@ export default function SignInEmail({ closeModal }) {
                     <span className={styles.sign_modal_span}>관리자</span>
                 </label>
                 
+                
                 <div className={styles.sign_modal_input}>
                     <span className={styles.sign_email_modal_span}>이메일 주소</span>
                     <input className={styles.sign_email_modal_input}
-                    type="email" placeholder="이메일" id="userEmail" spellCheck={false}/>
+                    type="email" placeholder="이메일" 
+                    id="userEmail" spellCheck={false}/>
                 </div>
                 <div className={styles.sign_modal_input}>
                     <span className={styles.sign_email_modal_span}>비밀번호</span>
                     <input className={styles.sign_email_modal_input}
-                    type="password" placeholder="비밀번호" id="userPwd"/>
+                    type="password" placeholder="비밀번호" 
+                    id="userPwd"/>
                 </div>
                 <span className={styles.sign_modal_forgot_password}>비밀번호 찾기</span>
                 <button className={styles.sign_modal_signin} 
-                onClick={handleLogin}>로그인</button>
+                onClick={handleSubmit}>로그인</button>
+
                 <span className={styles.sign_modal_signup}>
                     {`아직 `}
                     <strong className={styles.sign_modal_strong}
