@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import HeaderSign from "../layout/HeaderSign";
+import Header from "../layout/Header";
 import CoverImage from "./CoverImage";
 import ProfileInfo from "./ProfileInfo";
 import ProfileInfoDetail from "./ProfileInfoDetail";
@@ -9,7 +9,7 @@ import Footer from "../layout/Footer";
 export default function ProfilePage() {
     return (
         <div>
-            <HeaderSign />
+            <Header />
             <CoverImage />
             <ProfileInfo />
             <ProfileInfoDetail />
