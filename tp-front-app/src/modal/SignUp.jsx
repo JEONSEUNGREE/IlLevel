@@ -63,24 +63,24 @@ export default function SignUp({ closeAll, closeSignUp }) {
                 <span className={styles.sign_up_modal_span}>이름</span>
                 <input className={styles.sign_up_modal_input} 
                 type="text" placeholder="이름"
-                name="userFirstName"
-                value={formData.userFirstName}
+                name="userFirst"
+                value={formData.userFirst}
                 onChange={handleInput}/>
             </div>
             <div className={styles.sign_up_modal_div}>
                 <span className={styles.sign_up_modal_span}>성</span>
                 <input className={styles.sign_up_modal_input} 
                 type="text" placeholder="성"
-                name="userLastName"
-                value={formData.userLastName}
+                name="userLast"
+                value={formData.userLast}
                 onChange={handleInput}/>
             </div>
             <div className={styles.sign_up_modal_div}>
                 <span className={styles.sign_up_modal_span}>닉네임</span>
                 <input className={styles.sign_up_modal_input} 
                 type="text" placeholder="닉네임"
-                name="userNickName"
-                value={formData.userNickName}
+                name="userNick"
+                value={formData.userNick}
                 onChange={handleInput}/>
             </div>
             <div className={styles.sign_up_modal_div}>
