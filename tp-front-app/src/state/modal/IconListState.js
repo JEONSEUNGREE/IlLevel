@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+import { logout } from "../../util/CommonUri";
 
 const iconListState = atom({
     key: "iconListState",
@@ -16,7 +17,7 @@ const iconListState = atom({
         {
             id: 2,
             name: "로그아웃",
-            path: "/logout",
+            path: logout,
         },
     ],
 });
