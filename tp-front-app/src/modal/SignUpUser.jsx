@@ -4,9 +4,9 @@ import styles from "../css/modal/Sign.module.css";
 import logoIcon from "../img/main/logoIcon.svg";
 import axios from "axios";
 import { server } from "../util/CommonVal";
-import { signup } from "../util/CommonUri";
+import { signup_user } from "../util/CommonUri";
 
-export default function SignUp({ closeAll, closeSignUp }) {
+export default function SignUpUser({ closeAll, closeSignUp }) {
     const [formData, setFormData] = useState({
         userFirst: "",
         userLast: "",
@@ -28,7 +28,7 @@ export default function SignUp({ closeAll, closeSignUp }) {
         e.preventDefault();
         
         try {
-            const endpoint = server + signup;
+            const endpoint = server + signup_user;
             const response = await axios.post(endpoint, formData);
             console.log(response.data);
         } catch (error) {
@@ -118,7 +118,7 @@ export default function SignUp({ closeAll, closeSignUp }) {
     );
 }
 
-SignUp.propTypes = {
+SignUpUser.propTypes = {
     closeAll: PropTypes.func,
     closeSignUp: PropTypes.func,
 };

@@ -205,14 +205,17 @@
 }
 
 .sign_modal_signup {
-    display: block;
+    display: inline-block;
     /* border: 1px solid red; */
-    position: absolute;
+    position: relative;
+    margin-left: -40%;
+    top: 510px;
+    width: 120px;
+    text-align: center;
+}
+
+.sign_modal_signup:nth-of-type(3) {
     left: 50%;
-    top: 540px;
-    width: 250px;
-    transform: translate(-50%, 0);
-    white-space: pre-wrap;
 }
 
 .sign_modal_strong {
@@ -319,6 +322,84 @@
     position: absolute;
     left: 50%;
     top: 730px;
+    width: 130px;
+    transform: translate(-50%, 0);
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+
+
+/* 기업 회원가입 모달창 */
+.sign_com_modal_wrapper {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    top: -125px;
+    transform: translate(-50%, 0);
+    width: 500px;
+    height: 720px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px 1px #e0e0e0;
+    z-index: 999;
+}
+
+.sign_com_modal_div {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: relative;
+    margin-bottom: 15px;
+    left: 50px;
+    top: 160px;
+    width: 400px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.sign_com_modal_span {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.sign_com_modal_input {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 95%;
+    height: 40px;
+    box-shadow: 0 0 2px 1px #e0e0e0;
+}
+
+.sign_com_modal_input:focus {
+    outline: none;
+}
+
+.sign_com_modal_signin {
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    top: 570px;
+    transform: translate(-50%, 0);
+    width: 320px;
+    height: 57px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sign_com_modal_signup {
+    display: block;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 650px;
     width: 130px;
     transform: translate(-50%, 0);
     text-align: center;
