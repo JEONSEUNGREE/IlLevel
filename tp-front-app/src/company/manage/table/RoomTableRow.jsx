@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "../css/company/Company.module.css";
+import styles from "../../../css/company/Company.module.css";
 
 const RoomTableRow = ({ item }) => {
   return (

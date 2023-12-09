@@ -5,7 +5,7 @@ import ProfilePage from "../profile/ProfilePage";
 import CompanyPage from "../company/CompanyPage";
 import LoginPage from "../sign/LoginPage";
 import LogoutPage from "../sign/LogoutPage";
-import RoomUploadPage from "../company/RoomUploadPage";
+import RoomUploadPage from "../company/room/RoomUploadPage";
 import { main, login, logout, about, profile, company, room_upload } from "../util/CommonUri";
 
 const mainPage = {

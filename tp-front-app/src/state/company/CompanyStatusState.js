@@ -5,38 +5,15 @@ const companyStatusListState = atom({
     default: [
         {
             id: 0,
-            name: "등록",
-            path: "/",
+            name: "등록정보",
         },
         {
             id: 1,
-            name: "정보",
-            path: "/",
+            name: "예약확인",
         },
         {
             id: 2,
-            name: "예약확인",
-            path: "/",
-        },
-        {
-            id: 3,
-            name: "매출",
-            path: "/",
-        },
-        {
-            id: 4,
-            name: "체크인",
-            path: "/",
-        },
-        {
-            id: 5,
-            name: "체크아웃",
-            path: "/",
-        },
-        {
-            id: 6,
             name: "리뷰",
-            path: "/",
         },
     ],
 });

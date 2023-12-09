@@ -230,12 +230,18 @@
 
 
 /* 등록정보 영역 */
-.room_span {
+.room_span, .room_rsv_span {
     /* border: 1px solid red; */
     position: relative;
     left: 60px;
     top: 55px;
     font-size: 0.8em;
+}
+
+.room_rsv_span {
+    /* border: 1px solid red; */
+    left: 890px;
+    width: 200px;
 }
 
 .room_upload {
