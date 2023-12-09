@@ -12,8 +12,7 @@ export default function LoginPage() {
         const accountToken = searchParams.get('account_token');
     
         if (accountToken) {
-          const encodedToken = btoa(accountToken); // Base64 인코딩
-          setCookie('account_token', encodedToken, { path: '/' }); // 모든 경로에서 쿠키 사용
+          setCookie('account_token', accountToken, { path: '/' }); // 모든 경로에서 쿠키 사용
           navigate(main);
         }
       }, [searchParams, setCookie, navigate]);
