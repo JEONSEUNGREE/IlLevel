@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "../css/company/Company.module.css";
+import styles from "../../css/company/Company.module.css";
 
-const CompanyStatusForm = ({ item, onClick, selected }) => {
+const MenuForm = ({ item, onClick, selected }) => {
     const handleClick = () => {
         onClick();
     };
@@ -19,11 +19,11 @@ const CompanyStatusForm = ({ item, onClick, selected }) => {
     );
 };
 
-CompanyStatusForm.propTypes = {
+MenuForm.propTypes = {
     item: PropTypes.object,
     name: PropTypes.node,
     onClick: PropTypes.func.isRequired,
     selected: PropTypes.bool.isRequired,
 };
 
-export default CompanyStatusForm;
+export default MenuForm;

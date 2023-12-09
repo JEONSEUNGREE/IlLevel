@@ -5,7 +5,8 @@ import ProfilePage from "../profile/ProfilePage";
 import CompanyPage from "../company/CompanyPage";
 import LoginPage from "../sign/LoginPage";
 import LogoutPage from "../sign/LogoutPage";
-import { main, login, logout, about, profile, company } from "../util/CommonUri";
+import RoomUploadPage from "../company/room/RoomUploadPage";
+import { main, login, logout, about, profile, company, room_upload } from "../util/CommonUri";
 
 const mainPage = {
     path: main,
@@ -62,4 +63,13 @@ const companyPage = {
     ),
 };
 
-export { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage };
+const roomUploadPage = {
+    path: room_upload,
+    element: (
+        <>
+            <RoomUploadPage />
+        </>
+    ),
+};
+
+export { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage, roomUploadPage };

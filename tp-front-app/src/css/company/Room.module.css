@@ -1,0 +1,157 @@
+/* 객실 등록 */
+.room_upload_wrapper {
+    border: 1px solid #e0e0e0;
+    position: relative;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50%, 0);
+    width: 1185px;
+    height: 1050px;
+}
+
+.room_upload_h2 {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 100px;
+    left: 30px;
+    top: 30px;
+}
+
+.room_upload_div {
+    /* border: 1px solid red; */
+    border-bottom: 1px solid #f2f2f2;
+    position: relative;
+    left: 50%;
+    top: 70px;
+    transform: translate(-50%, 0);
+    width: 97%;
+    height: 330px;
+}
+
+.room_upload_div:nth-of-type(2) {
+    /* border: 1px solid red; */
+    top: 120px;
+    height: 150px;
+}
+
+.room_upload_div:nth-of-type(3) {
+    /* border: 1px solid red; */
+    top: 170px;
+    height: 250px;
+}
+
+.room_upload_div>h3 {
+    /* border: 1px solid red; */
+    padding: 0 1%;
+}
+
+.room_upload_div>h3::after {
+    border-bottom: 2px solid #757575;
+    position: relative;
+    margin: 5px 0;
+    content: "";
+    display: block;
+    width: 100%;
+}
+
+.room_upload_input_container {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 95%;
+    height: 45px;
+    color: #757575;
+    line-height: 45px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.room_upload_input_container>span {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: relative;
+    width: 150px;
+}
+
+.room_upload_input_container>input {
+    border: none;
+    border-bottom: 1px solid #757575;
+    position: relative;
+    margin-left: 10px;
+    width: 900px;
+    height: 35px;
+}
+
+.room_upload_input_container>input:focus {
+    outline: none;
+}
+
+.room_upload_span_explain {
+    /* border: 1px solid red; */
+    top: -100px;
+}
+
+.room_upload_span_image {
+    /* border: 1px solid red; */
+    top: 100px;
+}
+
+.room_upload_input_container>textarea {
+    border: 1px solid #757575;
+    border-radius: 3px;
+    position: relative;
+    padding: 10px;
+    top: 10px;
+    width: 880px;
+    height: 100px;
+    resize: none;
+}
+
+.room_upload_input_container>textarea:focus {
+    outline: none;
+}
+
+.room_upload_input_container>button {
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    top: 100px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.room_upload_input_container>button:hover {
+    background-color: #e0e0e0;
+}
+
+.room_upload_button_wrapper {
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50%;
+    top: 207.5px;
+    transform: translate(-50%, 0);
+    width: 250px;
+    height: 40px;
+    text-align: center;
+}
+
+.room_upload_button_wrapper>button {
+    border: none;
+    margin-right: 10px;
+    width: 100px;
+    height: 100%;
+    background-color: #88cffa;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.room_upload_button_wrapper>button:nth-of-type(2) {
+    position: relative;
+    left: 10px;
+}
+
+.room_upload_button_wrapper>button:hover {
+    background-color: #b3e2ff;
+}
