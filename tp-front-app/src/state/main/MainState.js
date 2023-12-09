@@ -20,7 +20,6 @@ export const useRcmLocalListState = () => {
                 mainSubData: [],
             });
             setRcmLocalListState(response.data.data || []);
-            console.log(response.data.data);
         } catch (error) {
             console.error("지역 추천 리스트 호출 오류:", error);
         }
@@ -45,7 +44,6 @@ export const useRcmPlayListState = () => {
                 mainSubData: [],
             });
             setRcmPlayListState(response.data.data || []);
-            console.log(response.data.data);
         } catch (error) {
             console.error("즐길거리 추천 리스트 호출 오류:", error);
         }
@@ -70,7 +68,6 @@ export const useRcmFoodListState = () => {
                 mainSubData: [],
             });
             setRcmFoodListState(response.data.data || []);
-            console.log(response.data.data);
         } catch (error) {
             console.error("음식점 추천 리스트 호출 오류:", error);
         }
