@@ -1,4 +1,4 @@
-export const backendAppServer = "http://127.0.0.1:8080";
+export const server = "http://dev.tp-penguin-app.store";
 export const signGoogle =
     "http://dev.tp-penguin-app.store/oauth2/authorization/google";
 export const signNaver =

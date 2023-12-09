@@ -1,13 +1,19 @@
-import React, { useCallback } from "react";
+import React, { useEffect, useCallback } from "react";
 import RcmCard from "./rcm/RcmCard";
 import { useRecoilValue } from "recoil";
-import { rcmPlayListState } from "../state/main/MainState";
+import { rcmPlayListState, useRcmPlayListState } from "../state/main/MainState";
 import styles from "../css/main/Main.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function RcmPlaySection() {
+    const fetchRcmPlayListState = useRcmPlayListState();
+
+    useEffect(() => {
+        fetchRcmPlayListState();
+    }, [rcmPlayListState]);
+
     const rcmPlayList = useRecoilValue(rcmPlayListState);
 
     // react-slick 설정
@@ -41,7 +47,14 @@ export default function RcmPlaySection() {
 
             <Slider {...settings} ref={slickRef}>
                 {rcmPlayList.map((item, index) => (
-                    <RcmCard props={item} key={index} />
+                    <RcmCard
+                        key={index}
+                        roomNm={item.roomNm}
+                        comName={item.comName}
+                        thumbNail={item.thumbNail}
+                        ratingAvg={item.ratingAvg}
+                        reviewCount={item.reviewCount}
+                    />
                 ))}
             </Slider>
             <span className={styles.rcm_carousel_left} onClick={previous}>

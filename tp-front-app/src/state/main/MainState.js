@@ -1,130 +1,79 @@
-import { atom } from "recoil";
+import { atom, useSetRecoilState } from "recoil";
+import axios from "axios";
+import { server } from "../../util/CommonVal";
+import { main_list } from "../../util/CommonUri";
 
 const rcmLocalListState = atom({
     key: "rcmLocalListState",
-    default: [
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg",
-            title: "먼지",
-            contents: "미묘하게 말 안 듣게 생김",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2016/01/05/17/57/dog-1123026_1280.jpg",
-            title: "깨끗",
-            contents: "눈물 자국 없는 말티즈",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2020/02/05/09/23/dog-4820566_1280.jpg",
-            title: "달려라 멍멍이",
-            contents: "하지만 꼴등",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2023/01/24/13/17/animal-7741005_1280.jpg",
-            title: "손자 기다리는 할머니",
-            contents: "특징 : 손을 유심히 살펴보는 스타일",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg",
-            title: "먼지",
-            contents: "미묘하게 말 안 듣게 생김",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2016/01/05/17/57/dog-1123026_1280.jpg",
-            title: "깨끗",
-            contents: "눈물 자국 없는 말티즈",
-        },
-    ],
+    default: [],
 });
+
+export const useRcmLocalListState = () => {
+    const setRcmLocalListState = useSetRecoilState(rcmLocalListState);
+
+    const fetchRcmLocalListState = async () => {
+        try {
+            const response = await axios.post(server + main_list, {
+                pageNumber: 0,
+                pageSize: 4,
+                mainViewData: [],
+                mainSubData: [],
+            });
+            setRcmLocalListState(response.data.data || []);
+        } catch (error) {
+            console.error("지역 추천 리스트 호출 오류:", error);
+        }
+    }; 
+    return fetchRcmLocalListState;
+};
 
 const rcmPlayListState = atom({
     key: "rcmPlayListState",
-    default: [
-        {
-            imageUrl:
-                "https://i0.wp.com/picjumbo.com/wp-content/uploads/cute-yorkshire-terrier-puppy.jpg?w=2210&quality=70",
-            title: "호캉스",
-            contents: "텔레비전 중독",
-        },
-        {
-            imageUrl:
-                "https://i0.wp.com/picjumbo.com/wp-content/uploads/combing-the-head-of-yorkshire-terrier.jpg?w=2210&quality=70",
-            title: "따갑다",
-            contents: "주인아 살살 빗으랬지",
-        },
-        {
-            imageUrl:
-                "https://images.pexels.com/photos/981062/pexels-photo-981062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            title: "교수님 연구실",
-            contents: "특징 : 모니터 화면 포커 게임",
-        },
-        {
-            imageUrl:
-                "https://images.pexels.com/photos/1629780/pexels-photo-1629780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            title: "지그시",
-            contents: "자네가 개껌을 빼돌렸나",
-        },
-        {
-            imageUrl:
-                "https://i0.wp.com/picjumbo.com/wp-content/uploads/cute-yorkshire-terrier-puppy.jpg?w=2210&quality=70",
-            title: "호캉스",
-            contents: "텔레비전 중독",
-        },
-        {
-            imageUrl:
-                "https://i0.wp.com/picjumbo.com/wp-content/uploads/combing-the-head-of-yorkshire-terrier.jpg?w=2210&quality=70",
-            title: "따갑다",
-            contents: "주인아 살살 빗으랬지",
-        },
-    ],
+    default: [],
 });
+
+export const useRcmPlayListState = () => {
+    const setRcmPlayListState = useSetRecoilState(rcmPlayListState);
+
+    const fetchRcmPlayListState = async () => {
+        try {
+            const response = await axios.post(server + main_list, {
+                pageNumber: 0,
+                pageSize: 4,
+                mainViewData: [],
+                mainSubData: [],
+            });
+            setRcmPlayListState(response.data.data || []);
+        } catch (error) {
+            console.error("즐길거리 추천 리스트 호출 오류:", error);
+        }
+    }; 
+    return fetchRcmPlayListState;
+};
 
 const rcmFoodListState = atom({
     key: "rcmFoodListState",
-    default: [
-        {
-            imageUrl:
-                "https://images.pexels.com/photos/8434641/pexels-photo-8434641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            title: "뼈다귀 사료",
-            contents: "고기맛이 일품",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2019/12/13/19/49/dog-food-4693738_1280.jpg",
-            title: "오색 개껌",
-            contents: "채소향 가득",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2017/07/10/19/14/grilling-2491119_1280.jpg",
-            title: "꼬치요리",
-            contents: "특징 : 고기 없음",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2015/08/27/14/11/grill-910541_1280.jpg",
-            title: "고기요리",
-            contents: "맛있어 보이는구만",
-        },
-        {
-            imageUrl:
-                "https://images.pexels.com/photos/8434641/pexels-photo-8434641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            title: "뼈다귀 사료",
-            contents: "고기맛이 일품",
-        },
-        {
-            imageUrl:
-                "https://cdn.pixabay.com/photo/2019/12/13/19/49/dog-food-4693738_1280.jpg",
-            title: "오색 개껌",
-            contents: "채소향 가득",
-        },
-    ],
+    default: [],
 });
+
+export const useRcmFoodListState = () => {
+    const setRcmFoodListState = useSetRecoilState(rcmFoodListState);
+
+    const fetchRcmFoodListState = async () => {
+        try {
+            const response = await axios.post(server + main_list, {
+                pageNumber: 0,
+                pageSize: 4,
+                mainViewData: [],
+                mainSubData: [],
+            });
+            setRcmFoodListState(response.data.data || []);
+        } catch (error) {
+            console.error("음식점 추천 리스트 호출 오류:", error);
+        }
+    }; 
+    return fetchRcmFoodListState;
+};
 
 const searchRecList = atom({
     key: "searchList",

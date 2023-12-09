@@ -2,32 +2,29 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "../../css/main/Main.module.css";
 
-const RcmLocalCard = ({ props }) => {
-    const { imageUrl, title, contents } = props;
-
+const RcmCard = ({ roomNm, comName, thumbNail, ratingAvg, reviewCount }) => {
     return (
         <li className={styles.card_wrapper}>
-            <img className={styles.card_img} src={imageUrl} alt="image" />
+            <img className={styles.card_img} src={thumbNail} alt="thumbNail" />
             <div className={styles.card_like}>
                 <span>♡</span>
             </div>
-            <div className={styles.card_title}>{title}</div>
+            <div className={styles.card_title}>{comName}</div>
             <div>
-                <span className={styles.card_star}>★★★★☆</span>
-                <span className={styles.card_count}>231,114</span>
+                <span className={styles.card_star}>{ratingAvg}</span>
+                <span className={styles.card_count}>{reviewCount}</span>
             </div>
-            <div className={styles.card_inform}>{contents}</div>
+            <div className={styles.card_inform}>{roomNm}</div>
         </li>
     );
 };
 
-RcmLocalCard.propTypes = {
-    props: PropTypes.object,
-    maxWidth: PropTypes.number,
-    height: PropTypes.number,
-    imageUrl: PropTypes.string,
-    title: PropTypes.string,
-    contents: PropTypes.string,
+RcmCard.propTypes = {
+    roomNm: PropTypes.string,
+    comName: PropTypes.string,
+    thumbNail: PropTypes.string,
+    ratingAvg: PropTypes.number,
+    reviewCount: PropTypes.number,
 };
 
-export default RcmLocalCard;
+export default RcmCard;

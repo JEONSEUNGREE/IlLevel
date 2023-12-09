@@ -3,7 +3,9 @@ import { Outlet } from "react-router-dom";
 import MainPage from "../main/MainPage";
 import ProfilePage from "../profile/ProfilePage";
 import CompanyPage from "../company/CompanyPage";
-import { main, about, profile, company } from "../util/CommonUri";
+import LoginPage from "../sign/LoginPage";
+import LogoutPage from "../sign/LogoutPage";
+import { main, login, logout, about, profile, company } from "../util/CommonUri";
 
 const mainPage = {
     path: main,
@@ -12,19 +14,24 @@ const mainPage = {
             <MainPage />
         </>
     ),
-    // children: [
-    //   {
-    //     path: "2depth",
-    //     loader: async () => {
-    //         return new Promise((res) => {
-    //           setTimeout(() => {
-    //             return res("")
-    //           }, 3000);
-    //         });
-    //       },
-    //     element: <div>2depth</div>
-    //   }
-    // ]
+};
+
+const loginPage = {
+    path: login,
+    element: (
+        <>
+            <LoginPage />
+        </>
+    ),
+};
+
+const logoutPage = {
+    path: logout,
+    element: (
+        <>
+            <LogoutPage />
+        </>
+    ),
 };
 
 const aboutPage = {
@@ -35,12 +42,6 @@ const aboutPage = {
             <Outlet />
         </div>
     ),
-    // children: [
-    //     {
-    //         path: "2depth",
-    //         element: <div>2depth</div>
-    //     }
-    // ]
 };
 
 const profilePage = {
@@ -61,4 +62,4 @@ const companyPage = {
     ),
 };
 
-export { mainPage, aboutPage, profilePage, companyPage };
+export { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage };
