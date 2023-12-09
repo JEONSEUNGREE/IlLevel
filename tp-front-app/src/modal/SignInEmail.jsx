@@ -25,14 +25,15 @@ export default function SignInEmail({ closeModal }) {
     const handleType = (type) => {setType(type);};
     const handleSubmit = async () => {
         try {
+            const endpoint = server + login;
             const userData = {
                 userEmail: document.getElementById("userEmail").value,
                 userPwd: document.getElementById("userPwd").value,
                 type: type,
             };
     
-            const response = await axios.post(server + login, userData);
-            console.log(response.data);
+            await axios.post(endpoint, userData);
+            
         } catch (error) {
             alert(error);
             console.error("이메일 로그인 오류:", error);
