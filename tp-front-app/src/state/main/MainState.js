@@ -15,7 +15,7 @@ export const useRcmLocalListState = () => {
         try {
             const response = await axios.post(server + main_list, {
                 pageNumber: 0,
-                pageSize: 10,
+                pageSize: 4,
                 mainViewData: [],
                 mainSubData: [],
             });
@@ -39,7 +39,7 @@ export const useRcmPlayListState = () => {
         try {
             const response = await axios.post(server + main_list, {
                 pageNumber: 0,
-                pageSize: 10,
+                pageSize: 4,
                 mainViewData: [],
                 mainSubData: [],
             });
@@ -63,7 +63,7 @@ export const useRcmFoodListState = () => {
         try {
             const response = await axios.post(server + main_list, {
                 pageNumber: 0,
-                pageSize: 10,
+                pageSize: 4,
                 mainViewData: [],
                 mainSubData: [],
             });
