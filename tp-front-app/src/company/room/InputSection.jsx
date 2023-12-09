@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../css/company/Room.module.css";
+import styles from "../../css/company/Room.module.css";
 import BasicInfo from "./info/BasicInfo";
 import PriceInfo from "./info/priceInfo";
 import ExplainInfo from "./info/ExplainInfo";
 import { useNavigate } from "react-router-dom";
 
-export default function RoomUploadSection() {
+export default function InputSection() {
     const navigate = useNavigate();
     
     const goBack = () => {

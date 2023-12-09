@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../css/company/Room.module.css";
+import styles from "../../../css/company/Room.module.css";
 
 export default function ExplainInfo() {
     return (
