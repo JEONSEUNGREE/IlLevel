@@ -2,12 +2,20 @@ import React from "react";
 import styles from "../css/company/Company.module.css";
 import companyListState from "../state/company/CompanyListState";
 import RoomTableRow from "./RoomTableRow";
+import { useNavigate } from "react-router";
+import { room_upload } from "../util/CommonUri";
 
 const MenuInfo = () => {
+    const navigate = useNavigate();
+
+    const goRoomUpload = () => {
+        navigate(room_upload);
+    };
+
     return (
         <>
             <span className={styles.room_span}>총 5개의 상품</span>
-            <button className={styles.room_upload}>객실 등록</button>
+            <button className={styles.room_upload} onClick={goRoomUpload}>객실 등록</button>
             <table className={styles.room_table}>
                 <thead>
                     <tr className={styles.room_table_head}>
