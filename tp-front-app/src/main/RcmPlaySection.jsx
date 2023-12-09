@@ -12,7 +12,7 @@ export default function RcmPlaySection() {
 
     useEffect(() => {
         fetchRcmPlayListState();
-    }, [fetchRcmPlayListState]);
+    }, []);
 
     const rcmPlayList = useRecoilValue(rcmPlayListState);
 
