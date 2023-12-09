@@ -6,5 +6,6 @@ export const signup_user = "/signup";
 export const signup_com = "/com/signup";
 export const login = "/login";
 export const logout = "/logout";
+export const room_upload = "/company/upload";
 export const mypage = "/usr/mypage/profile";
 export const main_list = "/rec/room/mainList";
