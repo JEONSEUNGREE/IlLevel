@@ -6,7 +6,8 @@ import CompanyPage from "../company/CompanyPage";
 import LoginPage from "../sign/LoginPage";
 import LogoutPage from "../sign/LogoutPage";
 import RoomUploadPage from "../company/room/RoomUploadPage";
-import { main, login, logout, about, profile, company, room_upload } from "../util/CommonUri";
+import CsPage from "../cs/CsPage";
+import { main, login, logout, about, profile, company, room_upload, cs } from "../util/CommonUri";
 
 const mainPage = {
     path: main,
@@ -72,4 +73,13 @@ const roomUploadPage = {
     ),
 };
 
-export { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage, roomUploadPage };
+const csPage = {
+    path: cs,
+    element: (
+        <>
+            <CsPage />
+        </>
+    )
+}
+
+export { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage, roomUploadPage, csPage };
