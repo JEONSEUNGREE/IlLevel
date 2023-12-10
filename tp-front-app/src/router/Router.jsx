@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage, roomUploadPage } from "./Main";
+import { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage, roomUploadPage, csPage } from "./Main";
 
 const router = createBrowserRouter([
     mainPage,
@@ -9,6 +9,7 @@ const router = createBrowserRouter([
     profilePage,
     companyPage,
     roomUploadPage,
+    csPage,
 ]);
 
 export default router;
