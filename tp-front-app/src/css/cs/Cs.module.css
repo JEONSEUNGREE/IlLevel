@@ -1,0 +1,232 @@
+/* 커버 사진 영역 */
+.cover_wrapper {
+    /* border: 1px solid red; */
+    position: relative;
+    top: 60px;
+    height: 366px;
+    background: url(../../img/company/companyBackground.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cover_widthLimit {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    width: 1090px;
+    max-width: 100%;
+}
+
+.cover_text {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: relative;
+    margin: auto;
+    padding: 35px;
+    left: 0;
+    top: 0;
+    width: 750px;
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+
+
+/* 네비게이션 영역 */
+.nav_wrapper {
+    border: 1px solid #cbccce;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -25px;
+    top: 60px;
+    width: 800px;
+    max-width: 100%;
+    background-color: #ffffff;
+}
+
+.nav_wrapper>ul {
+    margin: 0 auto;
+    width: 90%;
+    list-style: none;
+    overflow: auto;
+    font-size: 18px;
+    font-weight: 300;
+    /* line-height: 24px; */
+}
+
+.nav_list, .nav_contact {
+    /* border: 1px solid red; */
+    width: 24%;
+    float: left;
+}
+
+.nav_list>span, .nav_contact>span {
+    /* border: 1px solid red; */
+    display: block;
+    padding: 25px 0;
+    color: #000000;
+    text-align: center;
+    line-height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav_list>span:hover, .nav_contact>span:hover {
+    text-decoration: underline;
+}
+
+
+
+/* 문의 공통 영역 */
+.content_wrapper {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    margin-top: 130px;
+    /* margin-bottom: 40px; */
+    width: 1090px;
+    max-width: 100%;
+}
+
+.content_container {
+    margin: 0 auto;
+    width: 800px;
+}
+
+
+
+/* 문의 내역 영역 */
+.content_header {
+    /* border: 1px solid red; */
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.content_header>h1 {
+    margin: 0.67em 0;
+    margin-top: 0;
+}
+
+.content_header>span {
+    display: block;
+    margin: 0 0 5px 0;
+    white-space: pre-line;
+}
+
+.content_request>span {
+    display: block;
+    margin: 0 0 5px 0;
+    color: #757575;
+}
+
+.content_request_table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.content_request_table>thead>tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content_request_table>thead>tr>th {
+    padding: 0 20px;
+    min-width: 100px;
+    height: 60px;
+    color: #757575;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.content_request_table>tbody>tr>td {
+    border-bottom: 1px solid #dddddd;
+    padding: 0 20px;
+    max-width: 100px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table_th_width_limit, .table_td_width_limit {
+    padding-left: 0 !important;
+    width: 450px;
+}
+
+.table_td_width_limit:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+/* 문의 등록 영역 */
+.content_request {
+    /* border: 1px solid red; */
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.content_request_form_title>input {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    outline: none;
+    padding: 10px;
+    width: 97%;
+    max-width: 100%;
+    overflow: visible;
+    text-transform: none;
+    line-height: 1.15;
+    font-size: 14px;
+}
+
+.content_request_form_title>label, .content_request_form_field>label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.content_request_form_field>textarea {
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    outline: none;
+    padding: 10px;
+    width: 97%;
+    min-height: 120px;
+    vertical-align: middle;
+    resize: vertical;
+    overflow: auto;
+    line-height: 1.15;
+    font-size: 14px;
+}
+
+.content_request_form_field>span {
+    display: block;
+    margin: 5px 0;
+    font-size: 12px;
+    color: #757575;
+}
+
+.content_footer {
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.content_footer>button {
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 1.9286em;
+    width: auto;
+    max-width: 190px;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 2.72;
+    font-size: 14px;
+    transition: border .12s ease-in-out;
+    cursor: pointer;
+}
+
+.content_footer>button:hover {
+    background-color: #333333;
+}
