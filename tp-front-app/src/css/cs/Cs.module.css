@@ -119,6 +119,45 @@
     color: #757575;
 }
 
+.content_request_table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.content_request_table>thead>tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content_request_table>thead>tr>th {
+    padding: 0 20px;
+    min-width: 100px;
+    height: 60px;
+    color: #757575;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.content_request_table>tbody>tr>td {
+    border-bottom: 1px solid #dddddd;
+    padding: 0 20px;
+    max-width: 100px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table_th_width_limit, .table_td_width_limit {
+    padding-left: 0 !important;
+    width: 450px;
+}
+
+.table_td_width_limit:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 
 /* 문의 등록 영역 */
