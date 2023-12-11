@@ -12,7 +12,7 @@ export default function RcmLocalSection() {
 
     useEffect(() => {
         fetchRcmLocalListState();
-    }, [fetchRcmLocalListState]);
+    }, [rcmLocalListState]);
 
     const rcmLocalList = useRecoilValue(rcmLocalListState);
 

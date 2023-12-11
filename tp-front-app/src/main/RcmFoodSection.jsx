@@ -12,7 +12,7 @@ export default function RcmFoodSection() {
 
     useEffect(() => {
         fetchRcmFoodListState();
-    }, [fetchRcmFoodListState]);
+    }, [rcmFoodListState]);
 
     const rcmFoodList = useRecoilValue(rcmFoodListState);
 

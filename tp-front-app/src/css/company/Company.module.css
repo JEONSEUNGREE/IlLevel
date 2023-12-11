@@ -20,7 +20,7 @@
     top: 60px;
     width: 100%;
     height: 250px;
-    background-image: url(../../img/company/companyBackground.jpg);
+    background: url(../../img/company/companyBackground.jpg) no-repeat;
     background-size: cover;
     background-position: 0 -120px;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@
 
 
 
-/* 프로필 정보 영역 */
+/* 기업 정보 영역 */
 .info_wrapper {
     /* border: 1px solid red; */
     position: relative;
@@ -195,7 +195,7 @@
 
 
 
-/* 프로필 정보 상세 영역 */
+/* 기업 정보 상세 영역 */
 .info_detail_body {
     /* border: 1px solid red; */
     position: relative;
@@ -223,27 +223,135 @@
 
 .info_detail_introduce {
     /* border: 1px solid red; */
-    width: 290px;
-    height: 210px;
+    width: 1230px;
+    height: 500px;
 }
 
-.info_detail_share {
+
+
+/* 등록정보 영역 */
+.room_span, .room_rsv_span {
     /* border: 1px solid red; */
     position: relative;
-    top: 25px;
-    width: 290px;
-    height: 100px;
+    left: 60px;
+    top: 55px;
+    font-size: 0.8em;
 }
 
-.info_detail {
+.room_rsv_span {
+    /* border: 1px solid red; */
+    left: 890px;
+    width: 200px;
+}
+
+.room_upload {
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    right: 60px;
+    top:35px;
+    width: 100px;
+    height: 40px;
+    background-color: #88cffa;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.room_upload:hover {
+    background-color: #b3e2ff;
+}
+
+.room_table {
+    border-top: 2px solid #757575;
+    border-bottom: 1px solid #757575;
+    border-collapse: collapse;
+    position: relative;
+    left: 50%;
+    top: 65px;
+    transform: translate(-50%, 0);
+    width: 90%;
+}
+
+.room_table_head {
+    height: 50px;
+}
+
+.room_table_head>th {
+    /* border: 1px solid red; */
+    font-size: 0.9em;
+}
+
+.room_table_body {
+    height: 55px;
+    text-align: center;
+}
+
+.room_table_body>td {
+    /* border: 1px solid red; */
+    border-top: 1px solid #757575;
+    color: #333333;
+    font-size: 0.9em;
+}
+
+.room_table_modify, .room_table_delete {
+    border: 1px solid #757575;
+    border-radius: 1px;
+    margin-left: 5px;
+    width: 45px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #333333;
+    cursor: pointer;
+}
+
+.room_table_modify:hover, .room_table_delete:hover {
+    background-color: #f2f2f2;
+}
+
+.room_page {
+     /* border: 1px solid red; */
+     box-sizing: border-box;
+     position: relative;
+     left: 50%;
+     top: 90px;
+     transform: translate(-50%, 0);
+     width: 150px;
+     height: 25px;
+}
+
+.room_page>button {
+    border: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    color: #757575;
+    font-family: 'SUIT-Regular';
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.room_page>button:nth-of-type(2) {
+    /* border: 1px solid red; */
+    margin-left: 5px;
+}
+
+.room_page>button:nth-of-type(3), .room_page>button:nth-of-type(4) {
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0;
+}
+
+.room_page>button:nth-of-type(3) {
+    right: 30px;
+}
+
+.room_page>span {
     /* border: 1px solid red; */
     position: relative;
-    display: inline;
-    left: 315px;
-    top: -310px;
-    width: 915px;
-    height: 210px;
-    float: left;
+    left: 17.5px;
+    top: 1px;
+    color: #333333;
 }
 
 
