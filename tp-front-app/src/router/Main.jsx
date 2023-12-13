@@ -7,7 +7,12 @@ import LoginPage from "../sign/LoginPage";
 import LogoutPage from "../sign/LogoutPage";
 import RoomUploadPage from "../company/room/RoomUploadPage";
 import CsPage from "../cs/CsPage";
-import { main, login, logout, about, profile, company, room_upload, cs } from "../util/CommonUri";
+import DetailPage from "../detail/DetailPage";
+import {
+    main, login, logout, about,
+    profile, company, room_upload, cs,
+    detail,
+} from "../util/CommonUri";
 
 const mainPage = {
     path: main,
@@ -82,4 +87,17 @@ const csPage = {
     )
 }
 
-export { mainPage, loginPage, logoutPage, aboutPage, profilePage, companyPage, roomUploadPage, csPage };
+const detailPage = {
+    path: detail,
+    element: (
+        <>
+            <DetailPage />
+        </>
+    )
+}
+
+export {
+    mainPage, loginPage, logoutPage, aboutPage,
+    profilePage, companyPage, roomUploadPage, csPage,
+    detailPage,
+};

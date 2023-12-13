@@ -5,3 +5,5 @@ export const signNaver =
     "http://dev.tp-penguin-app.store/oauth2/authorization/naver";
 export const signKakao =
     "http://dev.tp-penguin-app.store/oauth2/authorization/kakao";
+export const mypage = "/usr/mypage/profile";
+export const main_list = "/rec/room/mainList";
