@@ -1,7 +1,6 @@
 import { atom, useSetRecoilState } from "recoil";
 import axios from "axios";
-import { server } from "../../util/CommonVal";
-import { main_list } from "../../util/CommonUri";
+import { server, main_list } from "../../util/CommonVal";
 
 const rcmLocalListState = atom({
     key: "rcmLocalListState",

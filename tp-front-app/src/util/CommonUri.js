@@ -8,5 +8,4 @@ export const login = "/login";
 export const logout = "/logout";
 export const room_upload = "/company/upload";
 export const cs = "/cs";
-export const mypage = "/usr/mypage/profile";
-export const main_list = "/rec/room/mainList";
+export const detail = "/detail";

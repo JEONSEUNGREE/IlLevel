@@ -1,0 +1,449 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.info_wrapper {
+    position: relative;
+    top: 60px;
+}
+
+
+
+/* 숙소명 영역 */
+.info_title {
+    /* border: 1px solid red; */
+    padding-top: 32px;
+    padding-bottom: 16px;
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+.info_title>div {
+    /* border: 1px solid red; */
+    position: relative;
+    margin: 0 auto;
+    width: 1140px;
+    height: 60px;
+}
+
+.info_title>div>h1 {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    position: relative;
+    width: 1068px;
+    height: 60px;
+    float: left;
+    font-family: 'GangwonEduPowerExtraBoldA';
+    font-size: 42px;
+}
+
+.info_like {
+    border: 1px solid #000000;
+    border-radius: 50%;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    float: right;
+    background-color: #ffffff;
+    font-family: 'SUIT-Regular';
+    font-size: 1.25em;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.info_like:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+/* 숙소 리뷰 영역 */
+.info_content {
+    position: relative;
+    width: 100%;
+}
+
+.info_section_review {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    width: 1140px;
+    height: 60px;
+}
+
+.info_section_review>span {
+    cursor: pointer;
+}
+
+.info_section_review>span:nth-of-type(1) {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: relative;
+    width: 88px;
+}
+
+.info_section_review>span:nth-of-type(2) {
+    /* border: 1px solid red; */
+    text-decoration: underline;
+}
+
+.info_section_review>span:nth-of-type(3) {
+    display: block;
+    /* border: 1px solid red; */
+    margin-top: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+/* 숙소 소개 영역 */
+.info_section_intro {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 100%;
+}
+
+.info_section_intro>div {
+    /* border: 1px solid red; */
+    position: relative;
+    margin: 0 auto;
+    padding: 32px 0;
+    width: 1140px;
+    height: 500px;
+}
+
+.info_section_intro_text {
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    width: 374px;
+    height: 220px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .25);
+    float: left;
+}
+
+.info_section_intro_text>div:nth-of-type(1) {
+    /* border: 1px solid red; */
+    position: relative;
+    top: 28.5px;
+    margin: auto;
+    width: 325px;
+    height: 163px;
+}
+
+.info_section_intro_text>div:nth-of-type(1)>h2 {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    margin-bottom: 48px;
+    width: 324px;
+}
+
+.info_section_intro_text>div:nth-of-type(1)>span {
+    display: block;
+}
+
+.info_section_intro_text>div:nth-of-type(1)>span:nth-of-type(1) {
+    margin-bottom: 16px;
+}
+
+.info_section_intro_pic {
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    width: 745px;
+    height: 500px;
+    float: right;
+}
+
+.info_section_intro_pic_big {
+    border: 1px solid red;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 448px;
+}
+
+.info_section_intro_pic_circle {
+    /* border: 1px solid red; */
+    position: relative;
+    margin: 0 auto;
+    top: -25px;
+    width: 126px;
+    list-style: none;
+}
+
+.info_section_intro_pic_circle>li {
+    display: inline-block;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    position: relative;
+    width: 20%;
+    text-align: center;
+}
+
+.info_section_intro_pic_small {
+    border: 1px solid red;
+    position: relative;
+    top: -20px;
+    list-style: none;
+}
+
+.info_section_intro_pic_small>li {
+    border: 1px solid red;
+    box-sizing: border-box;
+    margin-right: 0.1%;
+    width: 9.9%;
+    height: 50px;
+    float: left;
+}
+
+.info_section_intro_pic_small>:nth-child(1) {
+    border-bottom-left-radius: 8px;
+}
+
+.info_section_intro_pic_small>:nth-child(10) {
+    border-bottom-right-radius: 8px;
+}
+
+
+
+/* 리뷰 작성 영역 */
+.info_review {
+    position: relative;
+    width: 100%;
+}
+
+.info_review_write {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding: 32px 0;
+    width: 1140px;
+}
+
+.info_review_write>h2 {
+    margin-bottom: 24px;
+}
+
+.info_review_write>div {
+    border: 1px solid #000000;
+    border-radius: 24px;
+    padding: 12px 22px;
+    width: 102px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info_review_write>div:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+/* 리뷰 정보 영역 */
+.info_review_read {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding: 32px 0;
+    width: 1140px;
+}
+
+.info_review_read>h2 {
+    /* border: 1px solid red; */
+    width: 48px;
+    height: 40px;
+}
+
+.info_review_read>h2::after {
+    display: block;
+    content: "";
+    border-bottom: 2px solid;
+    padding-top: 8px;
+}
+
+.info_review_read_rating {
+    /* border: 1px solid red; */
+    padding: 24px;
+    padding-top: 48px;
+    width: 326px;
+    height: 178px;
+    float: left;
+}
+
+.info_review_read_rating>div:nth-child(1) {
+    /* border: 1px solid red; */
+    height: 30px;
+}
+
+.info_review_read_rating>div:nth-child(1)>span:nth-child(1) {
+    /* border: 1px solid red; */
+    margin-right: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info_review_read_rating>div:nth-child(1)>span:nth-child(2) {
+    display: inline-block;
+    /* border: 1px solid red; */
+    margin-right: 8px;
+    width: 88px;
+    height: 16px;
+    text-align: center;
+}
+
+.info_review_read_rating>div:nth-child(1)>span:nth-child(3) {
+    color: #333333;
+}
+
+.info_review_read_rating>div:nth-child(2) {
+    /* border: 1px solid red; */
+    margin-top: 24px;
+    height: 125px;
+    color: #333333;
+    font-size: 14px;
+}
+
+.font_widthLimit {
+    display: table-cell;
+    padding-bottom: 8px;
+    width: 80px;
+    height: 17px;
+}
+
+.font_block {
+    display: table-cell;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+/* 리뷰 영역 */
+.info_review_read_profile {
+    /* border: 1px solid red; */
+    padding-top: 48px;
+    padding-bottom: 24px;
+    width: 747px;
+    float: right;
+}
+
+.info_review_read_profile>hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin-bottom: 32px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    width: 500px;
+    height: 35px;
+    float: left;
+}
+
+.profile>div:nth-child(1) {
+    border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+.profile>div:nth-child(2) {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.profile>div:nth-child(2)>span:nth-child(1) {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile>div:nth-child(2)>span:nth-child(2), .profile>div:nth-child(2)>span:nth-child(3) {
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    font-size: 12px;
+}
+
+.like {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    width: 86px;
+    height: 32px;
+    float: right;
+}
+
+.like>div {
+    /* border: 1px solid red; */
+    display: inline-block;
+    padding: 4px;
+    width: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.like>div:hover {
+    border-radius: 30px;
+    background-color: #ebebeb;
+}
+
+.like>div:nth-child(1)>img {
+    margin-right: 5px;
+}
+
+.like>div:nth-child(1)>img, .like>div:nth-child(2)>img {
+    width: 18px;
+    height: 18px;
+}
+
+.like>div:nth-child(1)>span {
+    position: relative;
+    top: -3px;
+}
+
+.report {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 100%;
+    float: left;
+}
+
+.report>span:nth-child(1), .report>span:nth-child(2), .report>span:nth-child(3) {
+    display: block;
+    /* border: 1px solid red; */
+    position: relative;
+    margin: 8px 0;
+}
+
+.report>span:nth-child(2) {
+    font-weight: bold;
+}
+
+.report>span:nth-child(5) {
+    display: block;
+    margin-top: 24px;
+    color: #333333;
+    font-size: 12px;
+}
