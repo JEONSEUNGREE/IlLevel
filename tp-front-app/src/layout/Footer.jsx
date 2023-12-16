@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../css/main/Main.module.css";
+import styles from "../css/layout/Footer.module.css";
 import logoIcon from "../img/main/logoIcon.svg";
 
 export default function Footer() {
