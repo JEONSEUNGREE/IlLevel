@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { infoListState } from "../state/profile/InfoState";
-import { profileStatusListState } from "../state/profile/UserStatusState";
-import styles from "../css/profile/Profile.module.css";
-import setting from "../img/profile/setting.png";
+import { userStatusListState } from "../state/profile/UserStatusState";
+import styles from "../css/user/User.module.css";
 import InfoForm from "./InfoForm";
 import StatusForm from "./StatusForm";
-import useModal from "../modal/ModalCore";
-import ProfileModifySection from "./ProfileModifySection";
-import ProfileModifyMenu from "../modal/ProfileModifyMenu";
+import ProfileFollowSection from "./ProfileFollowSection";
 
 export default function ProfileInfo() {
     const infoList = useRecoilValue(infoListState);
-    const statusList = useRecoilValue(profileStatusListState);
-    const { isOpen, openModal, modalRef } = useModal(false);
+    const statusList = useRecoilValue(userStatusListState);
 
     const [selectedItem, setSelectedItem] = useState(statusList[0]);
     const handleStatus = (item) => {
@@ -54,21 +50,9 @@ export default function ProfileInfo() {
                     />
                 ))}
             </ul>
-            <div className={styles.info_modify}>
-                <ProfileModifySection />
-                <img
-                    className={styles.info_modify_img}
-                    src={setting}
-                    onClick={openModal}
-                />
+            <div className={styles.info_follow}>
+                <ProfileFollowSection />
             </div>
-            {isOpen && (
-                <div className={styles.modal_overlay}>
-                    <div className={styles.modal} ref={modalRef}>
-                        <ProfileModifyMenu />
-                    </div>
-                </div>
-            )}
         </div>
     );
 }

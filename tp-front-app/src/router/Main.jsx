@@ -8,10 +8,11 @@ import LogoutPage from "../sign/LogoutPage";
 import RoomUploadPage from "../company/room/RoomUploadPage";
 import CsPage from "../cs/CsPage";
 import DetailPage from "../detail/DetailPage";
+import UserPage from "../user/UserPage";
 import {
     main, login, logout, about,
     profile, company, room_upload, cs,
-    detail,
+    detail, user,
 } from "../util/CommonUri";
 
 const mainPage = {
@@ -95,9 +96,17 @@ const detailPage = {
         </>
     )
 }
+const userPage = {
+    path: user,
+    element: (
+        <>
+            <UserPage />
+        </>
+    )
+}
 
 export {
     mainPage, loginPage, logoutPage, aboutPage,
     profilePage, companyPage, roomUploadPage, csPage,
-    detailPage,
+    detailPage, userPage,
 };
