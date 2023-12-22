@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.info_wrapper {
+    display: flex;
+    position: relative;
+    top: 60px;
+}
+
+
+
+/* 숙소정보 영역 - 제목 */
+.info_title {
+    /* border: 1px solid red; */
+    margin: 96px 24px;
+    padding-right: 48px;
+    top: 48px;
+    width: 375px;
+    height: 900px;
+}
+
+.info_title>div {
+    border-right: 1px solid #e0e0e0;
+    position: sticky;
+    padding-right: 48px;
+    top: 108px;
+    width: 375px;
+    height: 558px;
+}
+
+.info_title>div>h1 {
+    /* border: 1px solid red; */
+    margin-bottom: 32px;
+    font-size: 42px;
+    white-space: pre-line;
+}
+
+.info_hotel {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 247px;
+    height: 327px;
+    cursor: pointer;
+}
+
+.info_hotel_img {
+    border: 1px solid red;
+    width: 213px;
+    height: 213px;
+}
+
+.info_hotel_text {
+    /* border: 1px solid red; */
+    margin-top: 16px;
+    width: 213px;
+    height: 64px;
+}
+
+.info_hotel_text>span:nth-of-type(1) {
+    display: block;
+    /* border: 1px solid red; */
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info_hotel_text>span:nth-of-type(2), .info_hotel_text>span:nth-of-type(3) {
+    display: block;
+    /* border: 1px solid red; */
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+/* 숙소정보 영역 - 내용 - 별점 */
+.info_content {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    margin: 96px 24px;
+    padding-left: 48px;
+    width: 713px;
+    height: 900px;
+}
+
+.info_rating {
+    /* border: 1px solid red; */
+    width: 665px;
+    height: 85px;
+    margin-bottom: 48px;
+}
+
+.info_rating>span:nth-of-type(1) {
+    display: block;
+    /* border: 1px solid red; */
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.info_rating>span:nth-of-type(2) {
+    display: flex;
+    /* border: 1px solid red; */
+    gap: 2px;
+}
+
+.info_rating>span:nth-of-type(2)>label {
+    /* border: 1px solid red; */
+    width: 40px;
+    height: 40px;
+}
+
+.info_rating_star {
+    border: 2px solid #88cffa;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.info_rating_star:hover,
+.info_rating_star:hover ~ .info_rating_star,
+.info_rating_star.selected,
+.info_rating_star.selected ~ .info_rating_star {
+    background-color: #88cffa;
+}
+
+.info_rating_text {
+    display: inline-block;
+    /* border: 1px solid red; */
+    position: relative;
+    top: -33px;
+    left: 220px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+/* 숙소정보 영역 - 내용 - 리뷰 */
+.info_input_content {
+    /* border: 1px solid red; */
+    margin-bottom: 48px;
+}
+
+.info_input_content>span, .info_input_title>span, .info_input_img>span {
+    display: block;
+    /* border: 1px solid red; */
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.info_input_content>textarea {
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px #e0e0e0;
+    border-radius: 4px;
+    margin: 2px;
+    padding: 16px;
+    width: 625px;
+    height: 95px;
+    font-size: 14px;
+    resize: none;
+}
+
+.info_input_content>textarea:focus {
+    outline: none;
+}
+
+
+
+/* 숙소정보 영역 - 내용 - 제목 */
+.info_input_title {
+    /* border: 1px solid red; */
+    margin-bottom: 48px;
+    width: 665px;
+    height: 122px;
+}
+
+.info_input_title>input {
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 16px;
+    width: 660px;
+    height: 55px;
+    font-size: 14px;
+}
+
+.info_input_title>input:focus {
+    outline: none;
+}
+
+
+
+/* 숙소정보 영역 - 내용 - 이미지 */
+.info_input_img>span:nth-of-type(1) {
+    margin-bottom: 4px;
+}
+
+.info_input_img>span:nth-of-type(2) {
+    /* border: 1px solid red; */
+    margin-bottom: 24px;
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.info_input_img>div {
+    /* border: 1px solid red; */
+    margin-bottom: 48px;
+    padding: 56px 0;
+    width: 665px;
+    height: 61px;
+    background-color: #f2f2f2;
+    text-align: center;
+    line-height: 61px;
+    cursor: pointer;
+}
+
+.info_input_img>div>span {
+    /* border: 1px solid red; */
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.info_select_img {
+    display: block;
+    /* border: 1px solid red; */
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.info_content>button {
+    border: none;
+    border-radius: 28px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 18px 24px;
+    width: 665px;
+    height: 56px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}

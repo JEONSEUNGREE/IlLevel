@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import {
     mainPage, loginPage, logoutPage, aboutPage,
     profilePage, companyPage, roomUploadPage, csPage,
-    detailPage, userPage,
+    detailPage, userPage, reviewPage,
 } from "./Main";
 
 const router = createBrowserRouter([
@@ -16,6 +16,7 @@ const router = createBrowserRouter([
     csPage,
     detailPage,
     userPage,
+    reviewPage,
 ]);
 
 export default router;
