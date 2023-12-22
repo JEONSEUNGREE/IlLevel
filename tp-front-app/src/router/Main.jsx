@@ -9,10 +9,11 @@ import RoomUploadPage from "../company/room/RoomUploadPage";
 import CsPage from "../cs/CsPage";
 import DetailPage from "../detail/DetailPage";
 import UserPage from "../user/UserPage";
+import ReviewPage from "../review/ReviewPage";
 import {
     main, login, logout, about,
     profile, company, room_upload, cs,
-    detail, user,
+    detail, user, review,
 } from "../util/CommonUri";
 
 const mainPage = {
@@ -96,6 +97,7 @@ const detailPage = {
         </>
     )
 }
+
 const userPage = {
     path: user,
     element: (
@@ -105,8 +107,17 @@ const userPage = {
     )
 }
 
+const reviewPage = {
+    path: review,
+    element: (
+        <>
+            <ReviewPage />
+        </>
+    )
+}
+
 export {
     mainPage, loginPage, logoutPage, aboutPage,
     profilePage, companyPage, roomUploadPage, csPage,
-    detailPage, userPage,
+    detailPage, userPage, reviewPage,
 };

@@ -10,3 +10,4 @@ export const room_upload = "/company/upload";
 export const cs = "/cs";
 export const detail = "/detail";
 export const user = "/profile/user";
+export const review = "/review";
